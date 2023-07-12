@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://vishal-s-p.github.io/al-folio/sitemap.xml
