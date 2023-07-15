@@ -1,6 +1,6 @@
 /******************************************************************************* Variables used throughout the theme. To adjust anything, simply edit the variables below and rebuild the theme. *****************************************************************************/
 /******************************************************************************* Themes *****************************************************************************/
-:root { --global-bg-color: #ffffff; --global-text-color: #000000; --global-theme-color: #00369f; --global-hover-color: #0076df; --global-footer-bg-color: #000000; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-icon-color: #424242; }
+:root { --global-bg-color: #ffffff;--global-gold-color: #CEB888; --global-text-color: #000000; --global-theme-color: #00369f; --global-hover-color: #0076df; --global-footer-bg-color: #000000; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-icon-color: #424242; }
 :root .fa-sun { display: none; }
 :root .fa-moon { padding-left: 10px; padding-top: 12px; display: block; }
 
@@ -42,8 +42,8 @@ a:hover:after, table.table a:hover:after { width: 100%; }
 .post-description a { color: inherit; }
 .post-description a:hover { color: var(--global-theme-color); text-decoration: none; }
 
-.navbar { box-shadow: none; border-bottom: 1px solid #e8e8e8; opacity: 0.95; background-color: var(--global-bg-color); }
-
+/* .navbar { box-shadow: none; border-bottom: 1px solid #e8e8e8; opacity: 0.95; background-color: var(--global-bg-color); } */
+.navbar { box-shadow: none; opacity: 0.95; background-color: var(--global-gold-color); }
 .navbar.navbar-light a:hover { text-decoration: none; }
 .navbar.navbar-light .navbar-brand { color: var(--global-text-color); }
 .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover { color: var(--global-hover-color); }
