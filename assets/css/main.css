@@ -184,3 +184,8 @@ html.transition, html.transition *, html.transition *:before, html.transition *:
 		transition: .3s;
 	}
 }
+
+.notify {
+	background-color: #ffdddd;
+	border-left: 6px solid #f44336;
+  }
