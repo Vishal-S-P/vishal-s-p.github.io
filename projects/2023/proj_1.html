@@ -52,14 +52,28 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h3 class="xtitle is-1 publication-title">SadTalker:
-            Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation</h3>
+            <h3 class="xtitle is-1 publication-title">DUMMY</h3>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="#" target="_blank">Wenxuan Zhang</a><sup>*,1,2</sup>
+                <a href="#" target="_blank">Vishal Purohit</a><sup>1</sup>
               </span>
-                <span class="author-block">
+              <span class="author-block">
+                <a href="" target="_blank">Junjie Luo</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="" target="_blank">Yiheng Chi</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="" target="_blank">Qi guo</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="" target="_blank">Stanley H. Chan</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="" target="_blank">Qiang Qiu</a><sup>1</sup>
+              </span>
+                <!-- <span class="author-block">
                   <a href="https://vinthony.github.io" target="_blank">Xiaodong Cun</a><sup>*,2</sup>
                 </span>
                   <span class="author-block">
@@ -80,22 +94,21 @@
                   </span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Fei Wang</a><sup>1</sup>
-                  </span>
+                  </span> -->
                   </div>
                   <br>
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
-                      <sup>1</sup> Xi'an Jiaotong University &nbsp;&nbsp;&nbsp;
-                      <sup>2</sup> Tencent AI Lab &nbsp;&nbsp;&nbsp;
-                      <sup>3</sup> Ant Group
-                      <br>CVPR 2023</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                      <sup>1</sup> Purdue University &nbsp;&nbsp;&nbsp;
+                      <br>CVPR 2024</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2211.12194.pdf" target="_blank"
+                        <!-- TODO : Add the link to the paper -->
+                        <a href="" target="_blank"
                         class="external-link ">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -106,7 +119,8 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/Winfredy/SadTalker" target="_blank"
+                    <!-- TODO : Add the link to the code -->
+                    <a href="" target="_blank"
                     class="external-link ">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -115,19 +129,19 @@
                   </a>
                 </span>
 
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://huggingface.co/spaces/vinthony/SadTalker" target="_blank"
                   class="external-link ">
                   <span>🤗 Demo (Hugging Face Space)</span>
                 </a>
-              </span>
+              </span> -->
 
-              <span class="link-block">
+              <!-- <span class="link-block">
                   <a href="https://colab.research.google.com/github/Winfredy/SadTalker/blob/main/quick_demo.ipynb" target="_blank"
                   class="external-link ">
                   <span>🧿 Demo (Colab)</span>
                 </a>
-              </span>
+              </span> -->
 
             </div>
           </div>
@@ -158,16 +172,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Generating talking head videos through a face image and a piece of speech audio still contains many challenges. 
-                    ie, unnatural head movement, distorted expression, and identity modification. 
-                    We argue that these issues are mainly because of learning from the coupled 2D motion fields.
-                    On the other hand, explicitly using 3D information also suffers problems of stiff expression and incoherent video.
-                    We present SadTalker, which generates 3D motion coefficients (head pose, expression) of the 3DMM from audio and implicitly modulates a novel 3D-aware face render for talking head generation.
-                    To learn the realistic motion coefficients, we explicitly model the connections between audio and different types of motion coefficients individually. 
-                    Precisely, we present ExpNet to learn the accurate facial expression from audio by distilling both coefficients and 3D-rendered faces. 
-                    As for the head pose, we design PoseVAE via a conditional VAE to synthesize head motion in different styles.
-                    Finally, the generated 3D motion coefficients are mapped to the unsupervised 3D keypoints space of the proposed face render, and synthesize the final video.
-                    We conduct extensive experiments to show the superior of our method in terms of motion and video quality.
+           Abstract goes here.
           </p>
         </div>
       </div>
@@ -182,7 +187,8 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">Pipeline</h2>
     <div class="hero-body">
-      <img src="https://user-images.githubusercontent.com/4397546/222490596-4c8a2115-49a7-42ad-a2c3-3bb3288a5f36.png">
+        <!-- TODO: Add the pipeline image -->
+      <img src="">
     </div>
   </div>
 </section>
@@ -207,196 +213,14 @@
   </div>
 </section>
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3"><strong>Video2</strong>: Speaking Chinese</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <video controls=""  width="100%">
-                    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-                    <source src="https://github.com/sadtalker/sadtalker.github.io/blob/main/static/videos/chinese_speaker.mp4?raw=true" type="video/mp4">
-                </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video
-
-  !-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3"><strong>Video3</strong>: Singing in different languages</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <video controls=""  width="100%">
-                    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-                    <source src="https://github.com/sadtalker/sadtalker.github.io/blob/main/static/videos/sing.mp4?raw=true" type="video/mp4">
-                </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video
-
-  !-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3"><strong>Video4</strong>: Controllable eye blinking</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <video controls=""  width="100%">
-                    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-                    <source src="https://github.com/sadtalker/sadtalker.github.io/blob/main/static/videos/eye%20blinking.mp4?raw=true" type="video/mp4">
-                </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video
-
-  !-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3"><strong>Video5</strong>: Comparison on the HDTF dataset</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <video controls=""  width="100%">
-                    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-                    <source src="https://github.com/sadtalker/sadtalker.github.io/blob/main/static/videos/compare.mp4?raw=true" type="video/mp4">
-                </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video
-
-
-    !-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3"><strong>Video6</strong>: Comparison on the VoxCeleb2 dataset</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <video controls=""  width="100%">
-                    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-                    <source src="https://github.com/sadtalker/sadtalker.github.io/blob/main/static/videos/comparison_crossid.mp4?raw=true" type="video/mp4">
-                </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video
-
-
-    !-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3"><strong>Video7</strong>: The results of the same driven audio with different styles</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <video controls=""  width="100%">
-                    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-                    <source src="https://github.com/sadtalker/sadtalker.github.io/blob/main/static/videos/different_style_same_audio.mp4?raw=true" type="video/mp4">
-                </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3"><strong>Video8</strong>:  The results of different driven audios with the same style</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <video controls=""  width="100%">
-                    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-                    <source src="https://github.com/sadtalker/sadtalker.github.io/blob/main/static/videos/different_audio_same_style.mp4?raw=true" type="video/mp4">
-                </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3"><strong>Video9</strong>:  Ablation on ExpNet</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <video controls=""  width="100%">
-                    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-                    <source src="https://github.com/sadtalker/sadtalker.github.io/blob/main/static/videos/ablation_ExpNet.mp4?raw=true" type="video/mp4">
-                </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3"><strong>Video10</strong>: Ablation on face render</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <video controls=""  width="100%">
-                    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-                    <source src="https://github.com/sadtalker/sadtalker.github.io/blob/main/static/videos/ablation_facerender.mp4?raw=true" type="video/mp4">
-                </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@misc{sadtalker,
-        title={SadTalker: Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation},
-        author={Zhang, Wenxuan and Cun, Xiaodong and Wang, Xuan and Zhang, Yong and Shen, Xi and Guo, Yu and Shan, Ying and Wang, Fei},
-        year={2022},
-        eprint={2211.12194},
+        title={Dummy},
+        author={Vishal Purohit and Junjie Luo and Yiheng Chi and Qi guo and Stanley H. Chan and Qiang Qiu},
+        year={2024},
+        eprint={},
 }
 </code></pre>
     </div>
