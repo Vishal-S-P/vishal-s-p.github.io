@@ -4,17 +4,20 @@ const projects = [
     { 
         title: "Project 1",
         imageUrl: "https://via.placeholder.com/150",
-        description: "Description for Project 1"
+        description: "Description for Project 1",
+        url: "http://example.com/project1"
     },
     { 
         title: "Project 2",
         imageUrl: "https://via.placeholder.com/150",
-        description: "Description for Project 2"
+        description: "Description for Project 2",
+        url: "http://example.com/project2"
     },
     { 
         title: "Project 3",
         imageUrl: "https://via.placeholder.com/150",
-        description: "Description for Project 3"
+        description: "Description for Project 3",
+        url: "http://example.com/project3"
     }
 ];
 
@@ -29,10 +32,12 @@ function createProjectBlocks() {
         const projectContent = document.createElement("div");
         projectContent.classList.add("project-content");
 
-        const projectTitle = document.createElement("div");
+        // Changed from a div to an a element for hyperlink
+        const projectTitle = document.createElement("a");
         projectTitle.classList.add("project-title");
         projectTitle.textContent = project.title;
-
+        projectTitle.href = project.url; // Assuming project.url contains the URL to open
+        projectTitle.target = "_blank"; // Optional: Opens the link in a new tab
         const projectImage = document.createElement("img");
         projectImage.classList.add("project-image");
         projectImage.src = project.imageUrl;
