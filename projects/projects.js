@@ -11,14 +11,9 @@ const projects = [
         title: "Project 2",
         imageUrl: "https://via.placeholder.com/150",
         description: "Description for Project 2",
-        url: "http://example.com/project2"
+        url: "https://vishal-s-p.github.io/projects/2023/proj_2.html"
     },
-    { 
-        title: "Project 3",
-        imageUrl: "https://via.placeholder.com/150",
-        description: "Description for Project 3",
-        url: "http://example.com/project3"
-    }
+    
 ];
 
 // Function to dynamically create project blocks
