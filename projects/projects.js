@@ -5,7 +5,7 @@ const projects = [
         title: "Project 1",
         imageUrl: "https://via.placeholder.com/150",
         description: "Description for Project 1",
-        url: "./2023/proj_1.html"
+        url: "https://vishal-s-p.github.io/projects/2023/proj_1.html"
     },
     { 
         title: "Project 2",
