@@ -1,30 +1,40 @@
-// Sample blog post data (you can replace this with your actual data)
-const blogPosts = [
-    { title: "First Blog Post", content: "This is the content of the first blog post." },
-    { title: "Second Blog Post", content: "This is the content of the second blog post." },
-    { title: "Third Blog Post", content: "This is the content of the third blog post." }
-];
+document.addEventListener('DOMContentLoaded', function() {
+    // Sample blog post data
+    const posts = [
+        {
+            title: "First Post",
+            content: "This is my first blog post. Welcome to my blog!",
+            imageUrl: "https://via.placeholder.com/600x400",
+            linkUrl: "https://www.example.com"
+        },
+        {
+            title: "Second Post",
+            content: "Here's the second post. Thanks for reading!",
+            imageUrl: "https://via.placeholder.com/600x400",
+            linkUrl: "https://www.example.com"
+        }
+    ];
 
-// Function to render blog posts
-function renderBlogPosts() {
-    const blogPostsContainer = document.getElementById("blog-posts");
+    const blogPostsContainer = document.getElementById('blog-posts');
 
-    blogPosts.forEach(post => {
-        const postCard = document.createElement("div");
-        postCard.classList.add("card-blogs");
+    // Function to create HTML for a single blog post
+    function createPostHTML(post) {
+        return `
+            <article>
+                <h2>${post.title}</h2>
+                <img src="${post.imageUrl}" alt="${post.title}">
+                <p>${post.content}</p>
+                <a href="${post.linkUrl}" target="_blank">Read more</a>
+            </article>
+        `;
+    }
 
-        const titleElement = document.createElement("h2");
-        titleElement.textContent = post.title;
+    // Function to render all blog posts
+    function renderPosts(posts) {
+        const postsHTML = posts.map(post => createPostHTML(post)).join('');
+        blogPostsContainer.innerHTML = postsHTML;
+    }
 
-        const contentElement = document.createElement("p");
-        contentElement.textContent = post.content;
-
-        postCard.appendChild(titleElement);
-        postCard.appendChild(contentElement);
-
-        blogPostsContainer.appendChild(postCard);
-    });
-}
-
-// Call the render function when the page loads
-window.onload = renderBlogPosts;
+    // Initial render
+    renderPosts(posts);
+});

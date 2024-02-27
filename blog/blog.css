@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+}
+
+.interest-section {
+    flex: 0 0 250px; /* Fixed width for interest topics */
+    padding: 20px;
+    background-color: #f0f0f0;
+    position: sticky;
+    top: 0;
+}
+
+.blog-section {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling for blog posts */
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+article {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
