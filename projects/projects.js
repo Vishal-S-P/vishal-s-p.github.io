@@ -5,7 +5,8 @@ const projects = [
         title: "Generative Quanta Color Imaging",
         imageUrl: "https://via.placeholder.com/150",
         url: "https://vishal-s-p.github.io/projects/2023/proj_1.html",
-        TLDR: "",
+        pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2024",
+        TLDR: "Colorization of one-bit images under adverse exposure conditions",
         authors: "",
         paper_link : "",
         code_link : "",
@@ -46,34 +47,69 @@ function createProjectBlocks() {
         const projectBlock = document.createElement("div");
         projectBlock.classList.add("project");
 
-        const projectContent = document.createElement("div");
-        projectContent.classList.add("project-content");
-
-        // Changed from a div to an a element for hyperlink
-        const projectTitle = document.createElement("a");
-        projectTitle.classList.add("project-title");
-        projectTitle.textContent = project.title;
-        projectTitle.href = project.url; // Assuming project.url contains the URL to open
-        projectTitle.target = "_blank"; // Optional: Opens the link in a new tab
         const projectImage = document.createElement("img");
         projectImage.classList.add("project-image");
         projectImage.src = project.imageUrl;
-        
-        // Abstract in italics
-        const projectAbstract = document.createElement("div");
-        projectAbstract.classList.add("project-abstract");
-        // Create an italic element to wrap the abstract text
-        const italicText = document.createElement("i");
-        italicText.textContent = project.abstract; // Use project.abstract or similar
-        projectAbstract.appendChild(italicText);
 
+        const projectContent = document.createElement("div");
+        projectContent.classList.add("project-content");
 
+        const projectTitle = document.createElement("a");
+        projectTitle.classList.add("project-title");
+        projectTitle.textContent = project.title;
+        projectTitle.href = project.url;
+        projectTitle.target = "_blank";
+
+        const projectVenue = document.createElement("div");
+        projectVenue.classList.add("project-venue");
+        projectVenue.textContent = `Publication Venue: ${project.pub_venue}`;
+
+        const projectTLDR = document.createElement("p");
+        projectTLDR.classList.add("project-tldr");
+        projectTLDR.textContent = `TLDR: ${project.TLDR}`;
+
+        // Adding conditional links if they exist
+        const linksContainer = document.createElement("div");
+        linksContainer.classList.add("project-links");
+
+        if (project.paper_link) {
+            const paperLink = document.createElement("a");
+            paperLink.href = project.paper_link;
+            paperLink.textContent = "Paper";
+            paperLink.classList.add("project-link");
+            paperLink.target = "_blank";
+            linksContainer.appendChild(paperLink);
+        }
+
+        if (project.code_link) {
+            const codeLink = document.createElement("a");
+            codeLink.href = project.code_link;
+            codeLink.textContent = "Code";
+            codeLink.classList.add("project-link");
+            codeLink.target = "_blank";
+            linksContainer.appendChild(codeLink);
+        }
+
+        if (project.dataset_link) {
+            const datasetLink = document.createElement("a");
+            datasetLink.href = project.dataset_link;
+            datasetLink.textContent = "Dataset";
+            datasetLink.classList.add("project-link");
+            datasetLink.target = "_blank";
+            linksContainer.appendChild(datasetLink);
+        }
+
+        // Append all the new elements to the projectContent
         projectContent.appendChild(projectTitle);
-        projectContent.appendChild(projectAbstract);
+        projectContent.appendChild(projectVenue);
+        projectContent.appendChild(projectTLDR);
+        projectContent.appendChild(linksContainer);
 
+        // Append the projectImage and projectContent to the projectBlock
         projectBlock.appendChild(projectImage);
         projectBlock.appendChild(projectContent);
 
+        // Finally, append the projectBlock to the projectsContainer
         projectsContainer.appendChild(projectBlock);
     });
 }
