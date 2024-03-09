@@ -20,7 +20,7 @@
   
   .project-image {
     display: block; /* Display as block to fill the container */
-    width: 100%; /* Full width of the container */
+    width: 30%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     border-bottom: 1px solid #ccc; /* Separate image from content */
     border-top-left-radius: 10px; /* Rounded top-left edge */
