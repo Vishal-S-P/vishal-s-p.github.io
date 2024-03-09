@@ -1,0 +1,56 @@
+.project {
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    overflow: hidden; /* Ensures the content respects the border radius */
+    transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
+    background: #fff; /* White background */
+    margin-bottom: 20px; /* Space between cards */
+  }
+  
+  .project:hover {
+    transform: translateY(-10px); /* Slightly raise the card on hover for more 3D effect */
+  }
+  
+  .project-image {
+    display: block; /* Display as block to fill the container */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ccc; /* Separate image from content */
+    border-top-left-radius: 10px; /* Rounded top-left edge */
+    border-top-right-radius: 10px; /* Rounded top-right edge */
+  }
+  
+  .project-content {
+    padding: 15px; /* Padding inside the content area */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .project-title {
+    font-size: 1.2em; /* Slightly larger title font */
+    color: #333; /* Dark grey color for the title */
+    text-decoration: none; /* No underline on title link */
+    margin-bottom: 10px; /* Space below title */
+    display: block; /* Display as block to allow for margin */
+  }
+  
+  .project-venue, .project-tldr {
+    font-size: 0.9em; /* Smaller font for details */
+    color: #666; /* Lighter grey for details */
+    margin-bottom: 5px; /* Space between details */
+  }
+  
+  .project-links {
+    display: flex; /* Display links in a row */
+    justify-content: start; /* Align links to the start */
+    gap: 10px; /* Space between links */
+  }
+  
+  .project-link {
+    background: #007bff; /* Example blue background */
+    color: white; /* White text color */
+    text-decoration: none; /* No underline on links */
+    padding: 5px 10px; /* Padding inside the link */
+    border-radius: 5px; /* Rounded edges for links */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+  }
