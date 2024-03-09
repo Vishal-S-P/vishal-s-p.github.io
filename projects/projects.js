@@ -8,31 +8,9 @@ const projects = [
         pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2024",
         TLDR: "Colorization of one-bit images under adverse exposure conditions",
         authors: "Vishal Purohit, Junjie Luo, Yiheng Chi, Qi Guo, Stanley H. Chan and Qiang Qiu",
+        authors_links: ['',"https://www.linkedin.com/in/junjiel",  "https://scholar.google.com/citations?user=WZYUtwQAAAAJ&hl=en",
+    "https://www.qiguo.org/pi", "https://engineering.purdue.edu/ChanGroup/stanleychan.html", "https://web.ics.purdue.edu/~qqiu/"]
     },
-    // { 
-    //     title: "Project 2",
-    //     imageUrl: "https://via.placeholder.com/150",
-    //     url: "https://vishal-s-p.github.io/projects/2023/proj_2.html",
-        
-    // },
-    // { 
-    //     title: "Project 3",
-    //     imageUrl: "https://via.placeholder.com/150",
-    //     url: "https://vishal-s-p.github.io/projects/2023/proj_2.html",
-        
-    // },
-    // { 
-    //     title: "Project 4",
-    //     imageUrl: "https://via.placeholder.com/150",
-    //     url: "https://vishal-s-p.github.io/projects/2023/proj_2.html",
-        
-    // },
-    // { 
-    //     title: "Project 5",
-    //     imageUrl: "https://via.placeholder.com/150",
-    //     url: "https://vishal-s-p.github.io/projects/2023/proj_2.html",
-        
-    // },
     
 ];
 
@@ -64,7 +42,30 @@ function createProjectBlocks() {
         const projectTLDR = document.createElement("p");
         projectTLDR.classList.add("project-tldr");
         
-        projectTLDR.textContent = `<em>TLDR:</em} ${project.TLDR}`;
+        projectTLDR.textContent = `TLDR: ${project.TLDR}`;
+
+        const authors = document.createElement("div");
+        authors.classList.add("project-authors");
+        // Split the authors string by ", " to handle each name
+        const authorsList = project.authors.split(", ");
+        authorsList.forEach((author, index) => {
+            let authorElement;
+            // If there's a link for this author, make it a hyperlink
+            if (project.authors_links[index]) {
+                authorElement = document.createElement("a");
+                authorElement.href = project.authors_links[index];
+                authorElement.target = "_blank";
+            } else {
+                // If no link, just use a span
+                authorElement = document.createElement("span");
+            }
+            authorElement.textContent = author;
+            authors.appendChild(authorElement);
+            // Add a comma after the author's name if it's not the last one
+            if (index < authorsList.length - 1) {
+                authors.appendChild(document.createTextNode(", "));
+            }
+        });
 
         // Adding conditional links if they exist
         const linksContainer = document.createElement("div");
