@@ -146,11 +146,7 @@
       <p>Hi! I  am a 2nd year Ph.D. student in the Department of ECE at Purdue University, where I work with <a href="https://web.ics.purdue.edu/~qqiu/">Prof. Qiang Qiu</a>. 
          My research aims to develop novel methods and algorithms for learning high-dimensional signals from sparse and
          quantized measurements, with applications in computer vision.</p> <p>Before joining Purdue, I was a research intern at IIT Varanasi for a year, where I worked on image processing and machine learning projects. Previously, I worked as an engineer in the medical electronics division at <a href=“https://tataelxsi.com/”>Tata Elxsi</a> for 2 years, where I developed software and hardware solutions for medical devices.</p>
-  <!-- Apart from my research, I am also leading the development of state-of-the-art computer vision models for <strong><span style="color:#4885ed">G</span><span style="color:#db3236">o</span><span style="color:#f4c20d">o</span><span style="color:#4885ed">g</span><span style="color:#3cba54">l</span><span style="color:#db3236">e</span>
-  </strong> <strong><span style="color:#FFA800">T</span><span style="color:#FFA800">e</span><span style="color:#FFA800">n</span><span style="color:#FFA800">s</span><span style="color:#FFA800">o</span><span style="color:#FFA800">r</span><span style="color:#FFA800">F</span><span style="color:#FFA800">l</span><span style="color:#FFA800">o</span><span style="color:#FFA800">w</span></strong> Model Garden,
-    a repository of high-quality implementations of popular deep learning models under guidence of <a href="https://davisjam.github.io/">Prof. James Davis</a> and <a href="https://scholar.google.ca/citations?user=CnxsW1QAAAAJ&hl=en">Dr. Abdullah Rashwan</a> (<strong><span style="color:#4885ed">G</span><span style="color:#db3236">o</span><span style="color:#f4c20d">o</span><span style="color:#4885ed">g</span><span style="color:#3cba54">l</span><span style="color:#db3236">e</span>
-    </strong>). 
-  I am really fortunate to collaborate with <a href="https://engineering.purdue.edu/ChanGroup/stanleychan.html">Prof. Stanley Chan</a> and <a href="https://www.qiguo.org/">Prof. Qi Guo.</a> -->
+      </div>
 </p>
 <h4> Research Interests</h4>
 <ul>
@@ -160,80 +156,15 @@
 </ul>
 </div>
 
-<section class="section">
-  <div class="container is-max-desktop">
 
-    <h2 class="title is-3">Publications</h2>
-
-    {% for publication in site.data.publications %}
-    <div class="publication-block columns">
-
-      <div class="column is-2">
-        <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
-          {% if publication.image_mouseover contains "mp4" %}
-          <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-            <source src="./images/{{ publication.image_mouseover }}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          {% endif %}
-          <img alt="{{ publication.title }}" src="./images/{{ publication.image }}" />
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="content">
-          <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
-          <div class="publication-authors">
-            {% for author_id in publication.authors %}
-            {% assign author = site.data.authors[author_id] %}
-            <span class="author-block {% if author.is_me %}author-me{% endif %}">
-              {% if author.is_me %}
-              {{ author.first_name }} {{author.middle_name}} {{ author.last_name }}{% if forloop.last == false %},{%
-              endif %}
-              {% else %}
-              <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name
-                }}</a>{% if forloop.last == false %},{% endif %}
-              {% endif %}
-            </span>
-            {% endfor %}
-          </div>
-          <div class="publication-venue">
-            <span>{{ publication.venue }}</span>
-            {% for award in publication.awards %}
-              <span class="publication-venue-emph">{{ award }}<span>
-            {% endfor %}
-          </div>
-          <p class="publication-description">{{ publication.description }}</p>
-          <!-- Publication Links. -->
-          <div class="publication-links buttons field has-addons">
-            <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
-              <span class="icon"><i class="fas fa-globe-asia"></i></span>
-              <span>Project Page</span>
-            </a>
-            <a class="external-link button is-small is-ghost" href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
-              <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>PDF</span>
-            </a>
-            <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ publication.arxiv }}">
-              <span class="icon"><i class="ai ai-arxiv"></i></span>
-              <span>arXiv</span>
-            </a>
-            {% if publication.github %}
-            <a class="external-link button is-small is-ghost" href="https://github.com/{{ publication.github }}">
-              <span class="icon"><i class="fa fab fa-github"></i></span>
-              <span>Code</span>
-            </a>
-            {% endif %}
-          </div>
-          <!--/ Publication Links. -->
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-      <div class="news">
+<div class="projects">
+  <h2>Recent Publications</h2>
+  <div id="project-list">
+   <!-- Projects will be dynamically added here -->
+ </div>
+ <script src="./projects/projects.js"></script>
+</div>
+  <div class="news">
   <h2>News</h2>
   
     <div class="table-responsive">
