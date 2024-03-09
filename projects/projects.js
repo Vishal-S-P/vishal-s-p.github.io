@@ -7,10 +7,7 @@ const projects = [
         url: "https://vishal-s-p.github.io/projects/2023/proj_1.html",
         pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2024",
         TLDR: "Colorization of one-bit images under adverse exposure conditions",
-        authors: "",
-        paper_link : "",
-        code_link : "",
-        dataset_link:""
+        authors: "Vishal Purohit, Junjie Luo, Yiheng Chi, Qi Guo, Stanley H. Chan and Qiang Qiu",
     },
     // { 
     //     title: "Project 2",
