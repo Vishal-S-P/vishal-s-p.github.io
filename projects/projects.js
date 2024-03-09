@@ -7,11 +7,28 @@ const projects = [
         url: "https://vishal-s-p.github.io/projects/2023/proj_1.html",
         pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2024",
         TLDR: "Colorization of one-bit images under adverse exposure conditions",
-        authors: "Vishal Purohit, Junjie Luo, Yiheng Chi, Qi Guo, Stanley H. Chan and Qiang Qiu",
-        authors_links: ['',"https://www.linkedin.com/in/junjiel",  "https://scholar.google.com/citations?user=WZYUtwQAAAAJ&hl=en",
+        authors: "Vishal Purohit, Junjie Luo, Yiheng Chi, Qi Guo, Stanley H. Chan, Qiang Qiu",
+        authors_links: ["https://vishal-s-p.github.io/","https://www.linkedin.com/in/junjiel",  "https://scholar.google.com/citations?user=WZYUtwQAAAAJ&hl=en",
     "https://www.qiguo.org/pi", "https://engineering.purdue.edu/ChanGroup/stanleychan.html", "https://web.ics.purdue.edu/~qqiu/"]
+    ,
+    paper_link:"./",
+    code_link:"./",
+    dataset_link:"./",
+    project_website: "https://vishal-s-p.github.io/projects/2023/proj_1.html"
     },
-    
+    { 
+        title: "Denoise-Merge-Denoise: Solving Sparse Linear Inverse Problems using Diffusion Mdoels",
+        imageUrl: "https://via.placeholder.com/150",
+        url: "./",
+        pub_venue:"Prepint, under review",
+        TLDR: "",
+        authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
+        authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://web.ics.purdue.edu/~qqiu/"]
+    ,
+    paper_link:"./",
+    code_link:"./",
+    project_website: "./"
+    },
 ];
 
 // Function to dynamically create project blocks
@@ -98,9 +115,18 @@ function createProjectBlocks() {
             linksContainer.appendChild(datasetLink);
         }
 
+        if (project.project_website) {
+            const projectWebsite = document.createElement("a");
+            projectWebsite.href = project.project_website;
+            projectWebsite.textContent = "Project Website";
+            projectWebsite.classList.add("project-link");
+            projectWebsite.target = "_blank";
+            linksContainer.appendChild(projectWebsite);
+        }
         // Append all the new elements to the projectContent
         projectContent.appendChild(projectTitle);
         projectContent.appendChild(projectVenue);
+        projectContent.appendChild(authors);
         projectContent.appendChild(projectTLDR);
         projectContent.appendChild(linksContainer);
 

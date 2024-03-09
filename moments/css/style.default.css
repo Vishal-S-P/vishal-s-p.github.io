@@ -725,6 +725,7 @@ ABOUT
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 2rem;
+  width: 50%;
 }
 
 .box-masonry h4 {
