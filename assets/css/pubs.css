@@ -8,12 +8,13 @@
     background: #fff; /* White background */
     margin-bottom: 20px; /* Space between cards */
     /* Default size, which is mobile-first */
-    width: 90%; /* Mobile: cards take up most of the screen */
-    max-width: 300px; /* Maximum width for large screens */
+    /* max-width: 300px; Maximum width for large screens */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   .project:hover {
     transform: translateY(-10px); /* Slightly raise the card on hover for more 3D effect */
+    box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.15);
   }
   
   .project-image {
@@ -23,25 +24,35 @@
     border-bottom: 1px solid #ccc; /* Separate image from content */
     border-top-left-radius: 10px; /* Rounded top-left edge */
     border-top-right-radius: 10px; /* Rounded top-right edge */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   
   .project-content {
     padding: 15px; /* Padding inside the content area */
     text-align: left; /* Align text to the left */
+    background: #ffffff; /* Optional: for a white background */
   }
   
   .project-title {
-    font-size: 1.2em; /* Slightly larger title font */
-    color: #333; /* Dark grey color for the title */
-    text-decoration: none; /* No underline on title link */
-    margin-bottom: 10px; /* Space below title */
-    display: block; /* Display as block to allow for margin */
+    font-size: 1.1rem; /* Larger font size for the title */
+    font-weight: 600; /* Increased weight for title prominence */
+    margin-bottom: 5px; /* Space below the title */
+    color: #333; /* Dark color for better readability */
+    text-decoration: none; /* Removes underline from links */
   }
   
-  .project-venue, .project-tldr {
-    font-size: 0.9em; /* Smaller font for details */
-    color: #666; /* Lighter grey for details */
-    margin-bottom: 5px; /* Space between details */
+  .project-venue {
+    font-size: 0.9rem;
+    font-weight: 400; /* Regular weight for the publication venue */
+    color: #555; /* Slightly lighter than the title for hierarchy */
+    margin-bottom: 10px; /* Space below the venue */
+  }
+  .project-tldr {
+    font-size: 0.85rem; /* Smaller font size for the TLDR */
+    line-height: 1.4; /* Increased line height for readability */
+    color: #666; /* Lighter color to differentiate from title and venue */
+    margin-bottom: 10px; /* Space below the TLDR */
   }
   
   .project-links {
@@ -57,24 +68,4 @@
     padding: 5px 10px; /* Padding inside the link */
     border-radius: 5px; /* Rounded edges for links */
     transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
-  }
-  /* Larger tablets */
-@media (min-width: 768px) {
-    .project {
-      width: 45%; /* Two cards will fit side by side */
-    }
-  }
-  
-  /* Desktops and laptops */
-  @media (min-width: 992px) {
-    .project {
-      width: 30%; /* Three cards will fit side by side */
-    }
-  }
-  
-  /* Larger desktops */
-  @media (min-width: 1200px) {
-    .project {
-      width: 22.5%; /* Four cards will fit side by side */
-    }
   }
