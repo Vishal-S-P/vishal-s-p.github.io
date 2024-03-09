@@ -1,4 +1,5 @@
 .project {
+    width: ;
     border: 1px solid #ccc; /* Light grey border */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
@@ -6,6 +7,9 @@
     transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
     background: #fff; /* White background */
     margin-bottom: 20px; /* Space between cards */
+    /* Default size, which is mobile-first */
+    width: 90%; /* Mobile: cards take up most of the screen */
+    max-width: 300px; /* Maximum width for large screens */
   }
   
   .project:hover {
@@ -14,7 +18,7 @@
   
   .project-image {
     display: block; /* Display as block to fill the container */
-    width: 50%; /* Full width of the container */
+    width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     border-bottom: 1px solid #ccc; /* Separate image from content */
     border-top-left-radius: 10px; /* Rounded top-left edge */
@@ -53,4 +57,24 @@
     padding: 5px 10px; /* Padding inside the link */
     border-radius: 5px; /* Rounded edges for links */
     transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+  }
+  /* Larger tablets */
+@media (min-width: 768px) {
+    .project {
+      width: 45%; /* Two cards will fit side by side */
+    }
+  }
+  
+  /* Desktops and laptops */
+  @media (min-width: 992px) {
+    .project {
+      width: 30%; /* Three cards will fit side by side */
+    }
+  }
+  
+  /* Larger desktops */
+  @media (min-width: 1200px) {
+    .project {
+      width: 22.5%; /* Four cards will fit side by side */
+    }
   }
