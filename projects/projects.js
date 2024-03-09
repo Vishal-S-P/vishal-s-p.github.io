@@ -59,11 +59,12 @@ function createProjectBlocks() {
 
         const projectVenue = document.createElement("div");
         projectVenue.classList.add("project-venue");
-        projectVenue.textContent = `Publication Venue: ${project.pub_venue}`;
+        projectVenue.textContent = `${project.pub_venue}`;
 
         const projectTLDR = document.createElement("p");
         projectTLDR.classList.add("project-tldr");
-        projectTLDR.textContent = `TLDR: ${project.TLDR}`;
+        
+        projectTLDR.textContent = `<em>TLDR:</em} ${project.TLDR}`;
 
         // Adding conditional links if they exist
         const linksContainer = document.createElement("div");
