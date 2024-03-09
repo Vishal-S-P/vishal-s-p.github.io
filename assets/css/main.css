@@ -15,10 +15,67 @@ body.fixed-top-nav { padding-top: 56px; }
 
 body.sticky-bottom-footer { padding-bottom: 0; }
 
-.container { max-width: 50vw; }
+.container { max-width: 60vw; }
 
 .profile img { width: 100%; }
-
+.card {
+	border-radius: 8px; /* Rounded corners */
+	transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effect */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Subtle shadow */
+	margin: 0 auto; /* Center the card if it's not in a layout */
+	width: 300px; /* Width of the card */
+	overflow: hidden; /* Ensure no overflow from the container */
+  }
+  
+  .card:hover {
+	transform: translateY(-10px); /* Lifts the card up slightly */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Increase the shadow to emphasize the lift */
+  }
+  .section-title {
+	color: #333;
+	font-size: 1.8rem; /* 28px/16px */
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+  }
+  .publication {
+	padding: 15px;
+	background: #f9f9f9;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  .news-list {
+	list-style-type: none;
+	padding: 0;
+  }
+  .news-item {
+	background: #ffffff;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-left: 4px solid #0056b3;
+	transition: background-color 0.3s ease;
+  }
+  
+  .news-item:hover {
+	background-color: #f5f5f5;
+  }
+  .social-links {
+	font-size: 24px; /* Size of icons */
+  }
+  
+  .social-link {
+	margin: 0 5px; /* Spacing between icons */
+	color: #333; /* Icon color */
+	text-decoration: none; /* No underline */
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+	color: #0056b3; /* Color when hovering or focusing on the icon */
+  }
+  
+  
 /****************************************************************************** Publications *****************************************************************************/
 /*****************************************************************************
 * Projects
