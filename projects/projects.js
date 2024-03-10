@@ -2,8 +2,21 @@
 // Array of project objects containing project details
 const projects = [
     { 
+        title: "Denoise-Merge-Denoise: Solving Sparse Linear Inverse Problems using Diffusion Models",
+        imageUrl: "assets/paper_assets/2023/DMD/dmd_cover.png",
+        url: "",
+        pub_venue:"Under Review",
+        TLDR: "Can diffusion models be used to solve sparse linear inverse problems?",
+        authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
+        authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://web.ics.purdue.edu/~qqiu/"]
+    ,
+    paper_link:"./",
+    code_link:"./",
+    project_website: "./"
+    },
+    { 
         title: "Generative Quanta Color Imaging",
-        imageUrl: "https://via.placeholder.com/150",
+        imageUrl: "assets/paper_assets/2023/generative_quanta_color/Generative_Quata_Color_Cover.png",
         url: "https://vishal-s-p.github.io/projects/2023/proj_1.html",
         pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2024",
         TLDR: "Colorization of one-bit images under adverse exposure conditions",
@@ -16,19 +29,7 @@ const projects = [
     dataset_link:"./",
     project_website: "https://vishal-s-p.github.io/projects/2023/proj_1.html"
     },
-    { 
-        title: "Denoise-Merge-Denoise: Solving Sparse Linear Inverse Problems using Diffusion Mdoels",
-        imageUrl: "https://via.placeholder.com/150",
-        url: "./",
-        pub_venue:"Prepint, under review",
-        TLDR: "",
-        authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
-        authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://web.ics.purdue.edu/~qqiu/"]
-    ,
-    paper_link:"./",
-    code_link:"./",
-    project_website: "./"
-    },
+    
 ];
 
 // Function to dynamically create project blocks

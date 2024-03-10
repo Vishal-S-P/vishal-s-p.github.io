@@ -10,7 +10,7 @@ html[data-theme='dark'] .fa-moon { display: none; }
 
 /****************************************************************************** Content *****************************************************************************/
 body { padding-bottom: 70px; color: var(--global-text-color); background-color: var(--global-bg-color); }
-
+  
 body.fixed-top-nav { padding-top: 56px; }
 
 body.sticky-bottom-footer { padding-bottom: 0; }
@@ -70,12 +70,104 @@ body.sticky-bottom-footer { padding-bottom: 0; }
 	text-decoration: none; /* No underline */
   }
   
-  .social-link:hover,
-  .social-link:focus {
-	color: #0056b3; /* Color when hovering or focusing on the icon */
+  .cardpage {
+	border-radius: 8px; /* Rounded corners */
+	transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effect */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Subtle shadow */
+	margin: 0 auto; /* Center the card if it's not in a layout */
+	overflow: hidden; /* Ensure no overflow from the container */
   }
   
+  .cardpage:hover {
+	transform: translateY(-10px); /* Lifts the card up slightly */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Increase the shadow to emphasize the lift */
+  }
+  .resume-card {
+	background: #fff; /* White background for the card */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+	margin: auto; /* Centers the card on the page */
+	width: 80%; /* Sets the width of the card to 80% of the parent element */
+	border-radius: 10px; /* Slightly rounded corners for aesthetics */
+	padding: 20px; /* Adds space inside the card */
+	max-width: 1000px; /* Maximum width of the card */
+  }
   
+  /* Add some padding around the text for better readability */
+  .resume-card h1,
+  .resume-card p,
+  .resume-card li,
+  .resume-card h2,
+  .resume-card h3,
+  .resume-card h4,
+  .resume-card h5,
+  .resume-card h6 {
+	padding: 0 15px;
+  }
+  
+  /* Add a hover effect to elevate the card slightly when it's hovered over */
+  .resume-card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* For a printed version, you might want to remove some of these styles */
+  @media print {
+	.resume-card {
+	  box-shadow: none;
+	  border-radius: 0;
+	  margin: 0;
+	  width: auto;
+	  max-width: none;
+	}
+  }
+
+  /* General header styling */
+.header {
+	background-color: #2C3E50; /* A dark shade of blue */
+	color: white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	padding: 10px 0;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* Styling for the navigation menu items */
+  .nav-item {
+	display: inline-block;
+	margin: 0 15px;
+	position: relative;
+  }
+  
+  /* Change the font style and add effects on hover */
+  .nav-item a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 5px 0;
+	transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-item a:hover {
+	color: #3498DB; /* Light blue on hover */
+	border-bottom: 3px solid #3498DB; /* Underline effect on hover */
+  }
+  
+  /* Highlight the current page */
+  .nav-item.active a {
+	color: #F1C40F; /* Yellow color for the active page */
+	border-bottom: 3px solid #F1C40F; /* Underline effect for the active page */
+  }
+
+  .cardblog {
+	/* Your existing card styles here */
+	opacity: 0;
+	transform: translateY(100px);
+	transition: all 0.6s ease-out;
+  }
+  
+  .cardblog-visible {
+	opacity: 1;
+	transform: translateY(0);
+  }
 /****************************************************************************** Publications *****************************************************************************/
 /*****************************************************************************
 * Projects
