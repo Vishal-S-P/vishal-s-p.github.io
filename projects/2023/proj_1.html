@@ -15,16 +15,17 @@
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
 
@@ -43,9 +44,7 @@
           <i class="fas fa-home"></i>
       </span>
       </a>
-
     </div>
-
   </div>
 </nav>
 
@@ -58,19 +57,19 @@
           <h1 class="title is-1 publication-title">Generative Quanta Color Imaging.</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-                <a href="#" target="_blank">Vishal Purohit</a>
+                <a href="../../index.html" target="_blank">Vishal Purohit, </a>
               </span>
               <span class="author-block">
-                <a href="" target="_blank">Junjie Luo</a>
+                <a href="https://www.linkedin.com/in/junjiel" target="_blank">Junjie Luo, </a>
               </span>
               <span class="author-block">
-                <a href="https://dblp.org/pid/226/5489.html" target="_blank">Yiheng Chi</a>
+                <a href="https://dblp.org/pid/226/5489.html" target="_blank">Yiheng Chi, </a>
               </span>
               <span class="author-block">
-                <a href="https://www.qiguo.org/pi" target="_blank">Qi Guo</a>
+                <a href="https://www.qiguo.org/pi" target="_blank">Qi Guo, </a>
               </span>
               <span class="author-block">
-                <a href="https://engineering.purdue.edu/ChanGroup/stanleychan.html" target="_blank">Stanley H. Chan</a>
+                <a href="https://engineering.purdue.edu/ChanGroup/stanleychan.html" target="_blank">Stanley H. Chan, </a>
               </span>
               <span class="author-block">
                 <a href="https://web.ics.purdue.edu/~qqiu/#about" target="_blank">Qiang Qiu</a>
@@ -78,21 +77,13 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Purdue University</span>
+            <p><span class="author-block">Elmore Family School of Electrical and Computer Engineering</span></p>
+            <span class="author-block">Purdue University, USA</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
@@ -119,7 +110,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming soon!)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -129,7 +120,7 @@
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Dataset</span>
                   </a>
             </div>
 
@@ -148,7 +139,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-         Colorization
+         Overview 
       </h2>
     </div>
   </div>
@@ -184,13 +175,38 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified cardabstract">
+          <!-- <p>This is an inline equation: \(e^{i\pi} + 1 = 0\)</p> -->
           The astonishing development of single-photon cameras has created an unprecedented opportunity for scientific and industrial imaging. However, the high data throughput generated by these 1-bit sensors creates a significant bottleneck for low-power applications. In this paper, we explore the possibility of generating a color image from a single binary frame of a single-photon camera. We evidently find this problem being particularly difficult to standard colorization approaches due to the substantial degree of exposure variation. The core innovation of our paper is an exposure synthesis model framed under a neural ordinary differential equation (NeuralODE) that allows us to generate a continuum of exposures from a single observation. This innovation ensures consistent exposure in binary images that colorizers take on, resulting in notably enhanced colorization. We demonstrate applications of the method in single-image and burst colorization and show superior generative performance over baselines.
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+    <div class="container is-max-desktop"></div>
+    <div class="image-caption-container">
+      <h2 class="title is-3">Colorization Challenge</h2>
+      <img src="./static/images/exp_synth_proj_1.jpg" alt="Descriptive text about the image">
+      <figcaption>Illustration of exposure correction and colorization of binary images using neural networks. (a) depicts a range of images from overexposed to underexposed, illustrating the degradation of image details due to exposure variation. (b) contrasts the standard colorization workflow and our proposed approach. In standard colorization approaches, a neural network learns to map a binary image to the corresponding color image via a neural network, \(\mathcal{F}^{aug}\), where superscript \(\textit{aug}\) indicates the colorizer is trained using datasets of augmented exposure images. Our approach does not require training colorizer with augmented exposure images. (c) compares the colorization results: the first row is the output of a colorizer trained without augmentation, the second row is the output of colorizer trained with augmented data, the third row corresponds to the results of our method and the last provides the ground truth images for reference.</figcaption>
+    </div>
+    
 
+    <div class="container is-max-desktop"></div>
+    <div class="image-caption-container">
+      <h2 class="title is-3">Methodology</h2>
+      <img src="./static/images/our_method_proj_1.jpg" alt="Descriptive text about the image">
+      <figcaption>An illustration of our proposed method for exposure adaptive colorization: A binary image, \(\mathbf{Y}\), which can be overexposed or underexposed, is sent into the proposed exposure synthesis module. Based on the input and target exposure levels, \(\widetilde\theta_\text{input}\) and \(\widetilde\theta_\text{target}\), this module adjusts the weights of a exposure synthesis network, which then generate an exposure-corrected image. Since the colorization modules are trained to colorize images at specific exposures, the exposure synthesis module ensures training and test samples are matched. Additionally, we generate images with varying exposures as input to the burst image colorization network. The trained network is able to exploit the complementary information across multiple exposures to synthesize colors in regions of the image that is otherwise not possible by a single image colorization network.</figcaption>
+    </div>
+    </div>
+
+    <!-- Image gallery -->
+  <div class="gallery-container">
+      <div class="image-gallery">
+          <img src="image1.jpg" alt="Image 1">
+          <img src="image2.jpg" alt="Image 2">
+          <img src="image3.jpg" alt="Image 3">
+          <!-- Add as many images as you like here -->
+      </div>
+  </div>
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">

@@ -17,7 +17,7 @@ const projects = [
     { 
         title: "Generative Quanta Color Imaging",
         imageUrl: "assets/paper_assets/2023/generative_quanta_color/Generative_Quata_Color_Cover.png",
-        url: "https://vishal-s-p.github.io/projects/2023/proj_1.html",
+        url: "projects/2023/proj_1.html",
         pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2024",
         TLDR: "Colorization of one-bit images under adverse exposure conditions",
         authors: "Vishal Purohit, Junjie Luo, Yiheng Chi, Qi Guo, Stanley H. Chan, Qiang Qiu",
