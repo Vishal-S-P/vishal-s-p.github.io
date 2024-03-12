@@ -171,10 +171,143 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 100%;
-  background-color: white;
+  font-size: 20px;
+  background-color: rgb(221, 219, 219);
   padding: 20px;
+  
+  border-radius: 10px;
+}
+.im_caption {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  font-size: 20px;
+  background-color: rgb(221, 219, 219);
+  padding: 20px;
+  
   border-radius: 10px;
 }
 .cardabstract:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.gallery-container {
+  position: relative;
+  overflow: visible;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* .image-gallery {
+  display: inline-block;
+  animation: slide 10s linear infinite; 
+} */
+
+/* .image-gallery img {
+  width: auto;
+  height: 100px; 
+  margin-right: 10px; 
+} */
+.image-gallery img {
+  width: auto;
+  height: 100px; /* Adjust based on your preference */
+  margin-right: 10px; /* Adjust spacing between images */
+  transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+  cursor: pointer; /* Changes cursor to indicate the image can be interacted with */
+}
+
+.image-gallery img:hover {
+  transform: scale(4.5); /* Adjust the scale value to control the zoom level */
+  z-index: 100; /* Ensure the zoomed image is above others */
+}
+
+.line-between {
+  height: 2px; /* Line thickness */
+  background-color: #bebdbd; /* Line color */
+  width: 100%; /* Line width */
+}
+
+@keyframes slide {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(-50%); /* Adjust based on content width */
+  }
+}
+.vertical-gallery {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  animation: slideVertical 10s linear infinite;
+}
+
+.vertical-gallery img {
+  width: 100px; /* Adjust as needed */
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+@keyframes slideVertical {
+  0% { top: 100%; }
+  100% { top: -100%; }
+}
+
+.horizontal-gallery {
+  display: none;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  top: 20px; /* Adjust as needed */
+  width: 100%;
+}
+
+.horizontal-gallery img {
+  width: 100px; /* Adjust as needed */
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Add keyframe animations for horizontal images appearing one after another */
+@keyframes appearSequentially {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.row {
+  margin-bottom: -2px;
+  display: flex;
+  justify-content: space-between;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: auto;
+  align-items: center;
+  justify-content: center;
+
+}
+ .image-container {
+  text-align: center; /* Centers the image label */
+  margin-top: 10px; /* Space between the image and the label */
+}
+.image-label{
+  font-size: 1.25rem; /* Adjust font size as needed */
+  color: #000000; /* Adjust font color as needed */
+  margin-top: 5px; /* Space between the image and the label */
+}
+.image-label-vert {
+  transform: rotate(-90deg); /* Rotates label 90 degrees counter-clockwise */
+  font-size: 1.0em; /* Adjust as needed */
+  width: 50px; /* Define a width to allow the text to wrap and become multiline */
+  line-height: 1.2; /* Adjust line height for better readability */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 0px;
 }
