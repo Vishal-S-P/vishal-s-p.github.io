@@ -27,7 +27,7 @@ const projects = [
     paper_link:"./",
     code_link:"./",
     dataset_link:"./",
-    project_website: "https://vishal-s-p.github.io/projects/2023/proj_1.html"
+    project_website: "https://vishal-s-p.github.io/projects/2023/generative_quanta_color.html"
     },
     
 ];
