@@ -91,7 +91,17 @@ body.sticky-bottom-footer { padding-bottom: 0; }
 	padding: 20px; /* Adds space inside the card */
 	max-width: 1000px; /* Maximum width of the card */
   }
-  
+  .scrollable-news {
+    width: 100%; /* or set a fixed width */
+	background: #fff; /* White background for the card */
+    height: 300px; /* adjust the height as needed */
+	margin: auto; /* Centers the card on the page */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    overflow-y: scroll; /* enables vertical scrolling if content overflows */
+    padding: 20px;
+	border-radius: 10px; /* Slightly rounded corners for aesthetics */
+    box-sizing: border-box;
+  }
   /* Add some padding around the text for better readability */
   .resume-card h1,
   .resume-card p,

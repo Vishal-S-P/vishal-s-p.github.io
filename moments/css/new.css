@@ -7,10 +7,7 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #e9ecef; /* A light gray background for contrast */
-   
-    background-image: url("../img/moment_back.jpg"); /* Add your own pattern or image */
-    
+    background-color: #e9ecef; /* A light gray background for contrast */  
     background-size: cover;
     background-attachment: fixed; /* Fix the background image for a parallax-like effect */
     color: #333;

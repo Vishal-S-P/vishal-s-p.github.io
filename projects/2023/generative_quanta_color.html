@@ -86,7 +86,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2403.19066"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -95,17 +95,17 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Video (Coming Soon!)</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -113,16 +113,16 @@
                   </span>
                   <span>Code (Coming soon!)</span>
                   </a>
-              </span>
+              </span> -->
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Dataset</span>
-                  </a>
+                  </a> -->
             </div>
 
           </div>
@@ -136,30 +136,13 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+        <source src="./static/videos/GQCI_teaser.mp4"
                 type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-         Overview 
-      </h2>
     </div>
   </div>
 </section>
 
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="section">
@@ -178,9 +161,10 @@
     <div class="container is-max-desktop">
     <div class="image-caption-container">
       <h2 class="title is-3">Colorization Challenge under Varying Exposure Conditions</h2>
-      <img src="./static/images/exp_synth_proj_1.jpg" alt="Descriptive text about the image">
+      <img src="./static/images/exp_synth_proj_1.png" alt="Descriptive text about the image">
       <div class="im_caption">
-      <figcaption>Illustration of exposure correction and colorization of binary images using neural networks. (a) depicts a range of images from overexposed to underexposed, illustrating the degradation of image details due to exposure variation. (b) contrasts the standard colorization workflow and our proposed approach. In standard colorization approaches, a neural network learns to map a binary image to the corresponding color image via a neural network, \(\mathcal{F}^{aug}\), where superscript \(\textit{aug}\) indicates the colorizer is trained using datasets of augmented exposure images. Our approach does not require training colorizer with augmented exposure images. (c) compares the colorization results: the first row is the output of a colorizer trained without augmentation, the second row is the output of colorizer trained with augmented data, the third row corresponds to the results of our method and the last provides the ground truth images for reference.</figcaption>
+        <figcaption>Illustration of exposure correction and colorization of binary images using neural networks. (a) depicts a range of images from overexposed to underexposed, illustrating the degradation of image details due to exposure variation. (b) contrasts the standard colorization workflow and our proposed approach. (i) In standard colorization approaches, a neural network learns to map a binary image \(\mathbf{Y}\) to the corresponding color image \(\mathbf{X}_{c}\) via a neural network, \(\mathcal{F}^{\text{aug}}\), where superscript `aug' indicates the colorizer is trained using dataset with augmented exposure images.  (ii) In contrast, our approach does not require training colorizer with augmented exposure images. (c) compares the colorization results: the first row is the output of a colorizer trained without augmentation, the second row is the output of colorizer trained with augmented data, the third row corresponds to the results of our method and the last provides the ground truth images for reference.</figcaption>
+      <!-- <figcaption>Illustration of exposure correction and colorization of binary images using neural networks. (a) depicts a range of images from overexposed to underexposed, illustrating the degradation of image details due to exposure variation. (b) contrasts the standard colorization workflow and our proposed approach. In standard colorization approaches, a neural network learns to map a binary image to the corresponding color image via a neural network, \(\mathcal{F}^{aug}\), where superscript \(\textit{aug}\) indicates the colorizer is trained using datasets of augmented exposure images. Our approach does not require training colorizer with augmented exposure images. (c) compares the colorization results: the first row is the output of a colorizer trained without augmentation, the second row is the output of colorizer trained with augmented data, the third row corresponds to the results of our method and the last provides the ground truth images for reference.</figcaption> -->
       </div>
     </div>
   </div>
@@ -189,10 +173,10 @@
     <div class="container is-max-desktop">
     <div class="image-caption-container">
       <h2 class="title is-3">Methodology</h2>
-      <img src="./static/images/our_method_proj_1.jpg" alt="Descriptive text about the image">
+      <img src="./static/images/our_method_proj_1.png" alt="Descriptive text about the image">
       <div class="im_caption">
-      <figcaption>An illustration of our proposed method for exposure adaptive colorization: A binary image, \(\mathbf{Y}\), which can be overexposed or underexposed, is sent into the proposed exposure synthesis module. Based on the input and target exposure levels, \(\widetilde\theta_\text{input}\) and \(\widetilde\theta_\text{target}\), this module adjusts the weights of a exposure synthesis network, which then generate an exposure-corrected image. Since the colorization modules are trained to colorize images at specific exposures, the exposure synthesis module ensures training and test samples are matched. Additionally, we generate images with varying exposures as input to the burst image colorization network. The trained network is able to exploit the complementary information across multiple exposures to synthesize colors in regions of the image that is otherwise not possible by a single image colorization network.</figcaption>
-      </div>
+      <figcaption>An illustration of our proposed method for exposure adaptive colorization: A binary image, \(\mathbf{Y}\), which can be overexposed or underexposed, is input into the proposed exposure synthesis module. The colorization of binary image can be achieved using Single Image Colorization (SIC) or Burst Image Colorization (BIC). (i) <b>SIC:</b> Based on the input and target exposure levels, \(\widetilde\theta_\text{input}\) and \(\widetilde\theta_\text{target}\), this module adjusts the weights of a exposure synthesis network \(\mathcal{G}\), which then generates an exposure-corrected image. Note that corrected image is not necessarily a binary image. Since the colorization module \(\mathcal{F}\) is trained to colorize only image of specific exposure, the exposure synthesis module ensures corrected binary image has similar exposure to the one on which \(\mathcal{F}\) is trained. (\romannumeral 2) <b>BIC:</b> For BIC we generate images with varying exposures as input to the burst image colorization network, \(\mathcal{F}_{\text{burst}}\). The trained network is able to exploit the complementary information across multiple exposures with the help of Cross Non-Local Fusion blocks to synthesize colors in regions of the image that is otherwise not possible by SIC approach.</figcaption>
+      
     </div>
     </div>
 </section>
@@ -494,11 +478,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{purohitquantacolor2024,
-  title={Generative Quanta Color Imaging},
-        author={Vishal Purohit and Junjie Luo and Yiheng Chi and Qi Guo and Stanley H. Chan and Qiang Qiu},
-        year={2024},
-        journal={CVPR},
+    <pre><code>@inproceedings{purohitquantacolor2024,
+      author = {Vishal Purohit, Junjie Luo, Yiheng Chi, Qi Guo, Stanley H. Chan, Qiang Qiu},
+      title  = {Generative Quanta Color Imaging},
+      year   = {2024},
+      booktitle = {CVPR},
 }</code></pre>
   </div>
 </section>

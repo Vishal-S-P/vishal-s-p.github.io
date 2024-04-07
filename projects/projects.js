@@ -17,19 +17,18 @@ const projects = [
     { 
         title: "Generative Quanta Color Imaging",
         imageUrl: "assets/paper_assets/2023/generative_quanta_color/Generative_Quata_Color_Cover.png",
-        url: "projects/2023/proj_1.html",
+        url: "projects/2023/generative_quanta_color.html",
         pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2024",
         TLDR: "Colorization of one-bit images under adverse exposure conditions",
         authors: "Vishal Purohit, Junjie Luo, Yiheng Chi, Qi Guo, Stanley H. Chan, Qiang Qiu",
         authors_links: ["https://vishal-s-p.github.io/","https://www.linkedin.com/in/junjiel",  "https://scholar.google.com/citations?user=WZYUtwQAAAAJ&hl=en",
     "https://www.qiguo.org/pi", "https://engineering.purdue.edu/ChanGroup/stanleychan.html", "https://web.ics.purdue.edu/~qqiu/"]
     ,
-    paper_link:"./",
-    code_link:"./",
-    dataset_link:"./",
+    paper_link:"https://arxiv.org/abs/2403.19066",
+    // code_link:"./",
+    // dataset_link:"./",
     project_website: "https://vishal-s-p.github.io/projects/2023/generative_quanta_color.html"
     },
-    
 ];
 
 // Function to dynamically create project blocks
