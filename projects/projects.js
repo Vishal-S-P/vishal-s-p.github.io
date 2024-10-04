@@ -1,19 +1,6 @@
 
 // Array of project objects containing project details
 const projects = [
-    // { 
-    //     title: "Solving General Inverse Problems using Multi-Diffusion Priors",
-    //     // imageUrl: "assets/paper_assets/2024/posterior_sampling/posterior_title_fig.jpg",
-    //     url: "./",
-    //     pub_venue:"Under Review",
-    //     TLDR: "Leveraging multiple priors to solve severly ill-posed inverse problems in imaging",
-    //     authors: "Vishal Purohit, Qiang Qiu",
-    //     authors_links: ["https://vishal-s-p.github.io/","https://web.ics.purdue.edu/~qqiu/"]
-    // ,
-    // paper_link:"./",
-    // code_link:"./",
-    // project_website: "./"
-    // },
     { 
         title: "Posterior Sampling Via Langevin Dynamics Based on Generative Priors",
         imageUrl: "assets/paper_assets/2024/posterior_sampling/posterior_title_fig.jpg",
@@ -27,19 +14,6 @@ const projects = [
     // code_link:"./",
     // project_website: "./"
     },
-    // { 
-    //     title: "Merging Tweedies: Zero-Shot Image Recovery via Measurement Decomposition and Diffusion Priors",
-    //     imageUrl: "assets/paper_assets/2023/DMD/dmd_cover.png",
-    //     url: "./",
-    //     pub_venue:"Under Review",
-    //     TLDR: "Can diffusion models be used to solve sparse linear inverse problems?",
-    //     authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
-    //     authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://web.ics.purdue.edu/~qqiu/"]
-    // ,
-    // paper_link:"./",
-    // code_link:"./",
-    // project_website: "./"
-    // },
     { 
         title: "Generative Quanta Color Imaging",
         imageUrl: "assets/paper_assets/2023/generative_quanta_color/Generative_Quata_Color_Cover.png",
