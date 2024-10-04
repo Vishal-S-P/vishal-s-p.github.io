@@ -1,45 +1,45 @@
 
 // Array of project objects containing project details
 const projects = [
-    { 
-        title: "Solving General Inverse Problems using Multi-Diffusion Priors",
-        // imageUrl: "assets/paper_assets/2024/posterior_sampling/posterior_title_fig.jpg",
-        url: "./",
-        pub_venue:"Under Review",
-        TLDR: "Leveraging multiple priors to solve severly ill-posed inverse problems in imaging",
-        authors: "Vishal Purohit, Qiang Qiu",
-        authors_links: ["https://vishal-s-p.github.io/","https://web.ics.purdue.edu/~qqiu/"]
-    ,
-    paper_link:"./",
-    code_link:"./",
-    project_website: "./"
-    },
+    // { 
+    //     title: "Solving General Inverse Problems using Multi-Diffusion Priors",
+    //     // imageUrl: "assets/paper_assets/2024/posterior_sampling/posterior_title_fig.jpg",
+    //     url: "./",
+    //     pub_venue:"Under Review",
+    //     TLDR: "Leveraging multiple priors to solve severly ill-posed inverse problems in imaging",
+    //     authors: "Vishal Purohit, Qiang Qiu",
+    //     authors_links: ["https://vishal-s-p.github.io/","https://web.ics.purdue.edu/~qqiu/"]
+    // ,
+    // paper_link:"./",
+    // code_link:"./",
+    // project_website: "./"
+    // },
     { 
         title: "Posterior Sampling Via Langevin Dynamics Based on Generative Priors",
         imageUrl: "assets/paper_assets/2024/posterior_sampling/posterior_title_fig.jpg",
-        // url: "projects/2024/posterior_sampling_via_langevin_dynamic_based_on_generative_priors.html",
+        url: "https://arxiv.org/abs/2410.02078",
         pub_venue:"Preprint",
         TLDR: "Posterior sampling for diverse image synthesis.",
         authors: "Vishal Purohit*, Matthew Repasky*, Jianfeng Lu, Qiang Qiu, Yao Xie, Xiuyuan Cheng",
         authors_links: ["https://vishal-s-p.github.io/","https://mrepasky3.github.io/","https://services.math.duke.edu/~jianfeng/", "https://web.ics.purdue.edu/~qqiu/", "https://www2.isye.gatech.edu/~yxie77/", "https://services.math.duke.edu/~xiuyuanc/"]
     ,
-    paper_link:"./",
-    code_link:"./",
-    project_website: "./"
+    paper_link:"https://arxiv.org/abs/2410.02078",
+    // code_link:"./",
+    // project_website: "./"
     },
-    { 
-        title: "Merging Tweedies: Zero-Shot Image Recovery via Measurement Decomposition and Diffusion Priors",
-        imageUrl: "assets/paper_assets/2023/DMD/dmd_cover.png",
-        url: "./",
-        pub_venue:"Under Review",
-        TLDR: "Can diffusion models be used to solve sparse linear inverse problems?",
-        authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
-        authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://web.ics.purdue.edu/~qqiu/"]
-    ,
-    paper_link:"./",
-    code_link:"./",
-    project_website: "./"
-    },
+    // { 
+    //     title: "Merging Tweedies: Zero-Shot Image Recovery via Measurement Decomposition and Diffusion Priors",
+    //     imageUrl: "assets/paper_assets/2023/DMD/dmd_cover.png",
+    //     url: "./",
+    //     pub_venue:"Under Review",
+    //     TLDR: "Can diffusion models be used to solve sparse linear inverse problems?",
+    //     authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
+    //     authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://web.ics.purdue.edu/~qqiu/"]
+    // ,
+    // paper_link:"./",
+    // code_link:"./",
+    // project_website: "./"
+    // },
     { 
         title: "Generative Quanta Color Imaging",
         imageUrl: "assets/paper_assets/2023/generative_quanta_color/Generative_Quata_Color_Cover.png",
