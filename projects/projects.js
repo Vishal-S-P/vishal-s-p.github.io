@@ -2,6 +2,19 @@
 // Array of project objects containing project details
 const projects = [
     { 
+        title: "Decomposed Generative Imaging",
+        imageUrl: "assets/paper_assets/2024/decomposed/decomposed.jpg",
+        url: "",
+        pub_venue:"Preprint",
+        TLDR: "Solving linear inverse problems using diffusion priors.",
+        authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
+        authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://web.ics.purdue.edu/~qqiu/"]
+    ,
+    paper_link:"",
+    // code_link:"./",
+    // project_website: "./"
+    },
+    { 
         title: "Posterior Sampling Via Langevin Dynamics Based on Generative Priors",
         imageUrl: "assets/paper_assets/2024/posterior_sampling/posterior_title_fig.jpg",
         url: "https://arxiv.org/abs/2410.02078",
