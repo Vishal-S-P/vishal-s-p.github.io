@@ -15,7 +15,7 @@ body.fixed-top-nav { padding-top: 56px; }
 
 body.sticky-bottom-footer { padding-bottom: 0; }
 
-.container { max-width: 60vw; }
+/* .container { max-width: 60vw; } */
 
 .profile img { width: 100%; }
 .card {
@@ -45,6 +45,7 @@ body.sticky-bottom-footer { padding-bottom: 0; }
 	margin-bottom: 20px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
+  
   .news-list {
 	list-style-type: none;
 	padding: 0;
@@ -71,7 +72,7 @@ body.sticky-bottom-footer { padding-bottom: 0; }
   }
   
   .cardpage {
-	width: ;
+	width: 100%;
 	border: 1px solid #ccc; /* Light grey border */
 	border-radius: 10px; /* Rounded corners */
 	transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
@@ -89,7 +90,7 @@ body.sticky-bottom-footer { padding-bottom: 0; }
 	background: #fff; /* White background for the card */
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
 	margin: auto; /* Centers the card on the page */
-	width: 80%; /* Sets the width of the card to 80% of the parent element */
+	width: 100%; /* Sets the width of the card to 80% of the parent element */
 	border-radius: 10px; /* Slightly rounded corners for aesthetics */
 	padding: 20px; /* Adds space inside the card */
 	max-width: 1000px; /* Maximum width of the card */
@@ -256,13 +257,14 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
 
 .distill a:hover { border-bottom-color: var(--global-theme-color); text-decoration: none; }
 
-.projects .grid-item { width: 100%; margin-bottom: 10px; }
+.projects .grid-item { width: 100%; margin-bottom: 10px;}
 .projects .grid-item a { color: black; text-decoration: none; }
 .projects .grid-item a:hover { color: var(--global-theme-color); }
 .projects .card img { width: 100%; }
 
 .project {
     border: 1px solid #ccc;
+	margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     display: flex;
@@ -275,7 +277,7 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
     margin-bottom: 10px;
 }
 .project-image {
-    width: 150px;
+    width: 30%; 
     margin-right: 20px;
     transition: transform 0.3s; /* Add transition for smooth animation */
 }
