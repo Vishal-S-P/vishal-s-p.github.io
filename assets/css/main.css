@@ -167,8 +167,9 @@ body.sticky-bottom-footer { padding-bottom: 0; }
   
   /* Highlight the current page */
   .nav-item.active a {
-	color: #F1C40F; /* Yellow color for the active page */
-	border-bottom: 3px solid #F1C40F; /* Underline effect for the active page */
+	/* color: #F1C40F; Yellow color for the active page */
+	color : var(--global-gold-color);
+	border-bottom: 3px solid var(--global-gold-color); 
   }
 
   .cardblog {

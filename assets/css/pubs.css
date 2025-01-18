@@ -1,6 +1,6 @@
 .project {
     width: 100% ;
-    border: 1px solid #ccc; /* Light grey border */
+    border: 5px solid #ccc; /* Light grey border */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /*Shadow for 3D effect
     overflow: hidden; /* Ensures the content respects the border radius */
@@ -20,7 +20,7 @@
   
   .project-image {
     display: block; /* Display as block to fill the container */
-    width: 20%; /* Full width of the container */
+    width: 30%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     border-bottom: 1px solid #ccc; /* Separate image from content */
     border-top-left-radius: 10px; /* Rounded top-left edge */
@@ -50,8 +50,9 @@
     margin-bottom: 10px; /* Space below the venue */
   }
   .project-tldr {
-    font-size: 0.85rem; /* Smaller font size for the TLDR */
+    font-size: 0.9rem; /* Smaller font size for the TLDR */
     line-height: 1.4; /* Increased line height for readability */
+    font-weight: 400; /* Increased weight for title prominence */
     color: #666; /* Lighter color to differentiate from title and venue */
     margin-bottom: 10px; /* Space below the TLDR */
   }

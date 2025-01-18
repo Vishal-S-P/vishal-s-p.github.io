@@ -6,7 +6,7 @@ const projects = [
         imageUrl: "assets/paper_assets/2024/decomposed/decomposed.jpg",
         url: "",
         pub_venue:"Preprint",
-        TLDR: "Solving linear inverse problems using diffusion priors.",
+        TLDR: "Solving linear inverse problems using multiple generative trajectories of diffusion model.",
         authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
         authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://web.ics.purdue.edu/~qqiu/"]
     ,
@@ -19,7 +19,7 @@ const projects = [
         imageUrl: "assets/paper_assets/2024/posterior_sampling/posterior_title_fig.jpg",
         url: "https://arxiv.org/abs/2410.02078",
         pub_venue:"Preprint",
-        TLDR: "Posterior sampling for diverse image synthesis.",
+        TLDR: "Posterior sampling for diverse image synthesis using distilled flow models.",
         authors: "Vishal Purohit*, Matthew Repasky*, Jianfeng Lu, Qiang Qiu, Yao Xie, Xiuyuan Cheng",
         authors_links: ["https://vishal-s-p.github.io/","https://mrepasky3.github.io/","https://services.math.duke.edu/~jianfeng/", "https://web.ics.purdue.edu/~qqiu/", "https://www2.isye.gatech.edu/~yxie77/", "https://services.math.duke.edu/~xiuyuanc/"]
     ,
