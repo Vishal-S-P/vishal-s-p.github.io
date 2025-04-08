@@ -8,24 +8,24 @@ const projects = [
         pub_venue:"Preprint",
         TLDR: "Solving linear inverse problems using multiple generative trajectories of diffusion model.",
         authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
-        authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://web.ics.purdue.edu/~qqiu/"]
+        authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://engineering.purdue.edu/~qqiu/"]
     ,
     paper_link:"",
     // code_link:"./",
     // project_website: "./"
     },
     { 
-        title: "Posterior Sampling Via Langevin Dynamics Based on Generative Priors",
+        title: "Consistency Posterior Sampling for Diverse Image Synthesis",
         imageUrl: "assets/paper_assets/2024/posterior_sampling/posterior_title_fig.jpg",
         url: "https://arxiv.org/abs/2410.02078",
-        pub_venue:"Preprint",
+        pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2025",
         TLDR: "Posterior sampling for diverse image synthesis using distilled flow models.",
         authors: "Vishal Purohit*, Matthew Repasky*, Jianfeng Lu, Qiang Qiu, Yao Xie, Xiuyuan Cheng",
-        authors_links: ["https://vishal-s-p.github.io/","https://mrepasky3.github.io/","https://services.math.duke.edu/~jianfeng/", "https://web.ics.purdue.edu/~qqiu/", "https://www2.isye.gatech.edu/~yxie77/", "https://services.math.duke.edu/~xiuyuanc/"]
+        authors_links: ["https://vishal-s-p.github.io/","https://mrepasky3.github.io/","https://services.math.duke.edu/~jianfeng/", "https://engineering.purdue.edu/~qqiu/", "https://www2.isye.gatech.edu/~yxie77/", "https://services.math.duke.edu/~xiuyuanc/"]
     ,
     paper_link:"https://arxiv.org/abs/2410.02078",
-    // code_link:"./",
-    // project_website: "./"
+    code_link:"https://github.com/Vishal-S-P/CPS_Diverse",
+    project_website: "./projects/2024/posterior_sampling_via_langevin_dynamic_based_on_generative_priors.html"
     },
     { 
         title: "Generative Quanta Color Imaging",
@@ -35,12 +35,12 @@ const projects = [
         TLDR: "Colorization of one-bit images under adverse exposure conditions",
         authors: "Vishal Purohit, Junjie Luo, Yiheng Chi, Qi Guo, Stanley H. Chan, Qiang Qiu",
         authors_links: ["https://vishal-s-p.github.io/","https://www.linkedin.com/in/junjiel",  "https://scholar.google.com/citations?user=WZYUtwQAAAAJ&hl=en",
-    "https://www.qiguo.org/pi", "https://engineering.purdue.edu/ChanGroup/stanleychan.html", "https://web.ics.purdue.edu/~qqiu/"]
+    "https://www.qiguo.org/pi", "https://engineering.purdue.edu/ChanGroup/stanleychan.html", "https://engineering.purdue.edu/~qqiu/"]
     ,
     paper_link:"https://arxiv.org/abs/2403.19066",
     // code_link:"./",
     // dataset_link:"./",
-    project_website: "https://vishal-s-p.github.io/projects/2023/generative_quanta_color.html"
+    project_website: "./projects/2023/generative_quanta_color.html"
     },
 ];
 

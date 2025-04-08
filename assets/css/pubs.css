@@ -1,5 +1,4 @@
 .project {
-    width: 100% ;
     border: 5px solid #ccc; /* Light grey border */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /*Shadow for 3D effect
@@ -20,7 +19,6 @@
   
   .project-image {
     display: block; /* Display as block to fill the container */
-    width: 30%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     border-bottom: 1px solid #ccc; /* Separate image from content */
     border-top-left-radius: 10px; /* Rounded top-left edge */
