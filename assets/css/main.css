@@ -11,7 +11,7 @@ html[data-theme='dark'] .fa-moon { display: none; }
 /****************************************************************************** Content *****************************************************************************/
 body { padding-bottom: 70px; color: var(--global-text-color); background-color: var(--global-bg-color); }
   
-body.fixed-top-nav { padding-top: 56px; }
+body.fixed-top-nav { padding-top: 25px; }
 
 body.sticky-bottom-footer { padding-bottom: 0; }
 
@@ -54,7 +54,7 @@ body.sticky-bottom-footer { padding-bottom: 0; }
 	background: #ffffff;
 	margin-bottom: 10px;
 	padding: 10px;
-	border-left: 4px solid #0056b3;
+	border-left: 4px solid #CEB888;
 	transition: background-color 0.3s ease;
   }
   
@@ -98,9 +98,10 @@ body.sticky-bottom-footer { padding-bottom: 0; }
   .scrollable-news {
     width: 100%; /* or set a fixed width */
 	background: #fff; /* White background for the card */
+	border: 5px solid #ccc; /* Light grey border */
     height: 300px; /* adjust the height as needed */
 	margin: auto; /* Centers the card on the page */
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     overflow-y: scroll; /* enables vertical scrolling if content overflows */
     padding: 20px;
 	border-radius: 10px; /* Slightly rounded corners for aesthetics */
@@ -265,7 +266,6 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
 
 .project {
     border: 1px solid #ccc;
-	margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     display: flex;
@@ -278,7 +278,7 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
     margin-bottom: 10px;
 }
 .project-image {
-    width: 30%; 
+    width: 25%; 
     margin-right: 20px;
     transition: transform 0.3s; /* Add transition for smooth animation */
 }

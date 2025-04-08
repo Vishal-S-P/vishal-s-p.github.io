@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Posterior Sampling Via Langevin Dynamics Based on Generative Priors.">
+        content="Consistency Posterior Sampling for Diverse Image Synthesis">
   <meta name="keywords" content="Posterior sampling, Consistency Models, Generative Priors, Bayesian Imaging">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Posterior Sampling Via Langevin Dynamics Based on Generative Priors</title>
+  <title>Consistency Posterior Sampling for Diverse Image Synthesis</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -54,16 +54,16 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Posterior Sampling Via Langevin Dynamics Based on Generative Priors.</h1>
+          <h1 class="title is-1 publication-title">Consistency Posterior Sampling for Diverse Image Synthesis</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-                <a href="../../index.html" target="_blank">Vishal Purohit<sup>♦</sup>*, </a>
+                <a href="../../index.html" target="_blank">Vishal Purohit<sup>♦,</sup>*, </a>
               </span>
               <span class="author-block">
-                <a href="https://mrepasky3.github.io/" target="_blank">Matthew Repasky<sup>‡</sup>*, </a>
+                <a href="https://mrepasky3.github.io/" target="_blank">Matthew Repasky<sup>‡,</sup>*, </a>
               </span>
               <span class="author-block">
-                <a href="https://services.math.duke.edu/~jianfeng/" target="_blank">Jianfeng Lu<sup>†</sup>, </a>
+                <a href="https://services.math.duke.edu/~jianfeng/" target="_blank">Jianfeng Lu<sup>†,△</sup>, </a>
               </span>
               <span class="author-block"></span>
                 <a href="https://web.ics.purdue.edu/~qqiu/" target="_blank">Qiang Qiu<sup>♦</sup>, </a>
@@ -78,15 +78,17 @@
 
           <div class="is-size-5 publication-authors">
             <p><span class="author-block">♦ Elmore Family School of Electrical and Computer Engineering, Purdue University, USA</span></p>
-            <p><span class="author-block">† School of Mathematics, Duke University, USA</span></p>
+            <p><span class="author-block">† Department of Mathematics, Duke University, USA</span></p>
+            <p><span class="author-block">△ Department of Physics and Department of Chemistry, Duke University, USA</span></p>
             <p><span class="author-block">‡ H. Milton Stewart School of Industrial and Systems Engineering, Georgia Institute of Technology, USA</span></p>
+            <p><span class="author-block">* Equal Contribution</span></p>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2410.02078"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -106,12 +108,12 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/Vishal-S-P/CPS_Diverse"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (Coming soon!)</span>
+                  <span>Code</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -151,26 +153,24 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified cardabstract">
-          Posterior sampling in high-dimensional spaces using generative models holds
-          significant promise for various applications, including but not limited to inverse
-          problems and guided generation tasks. Despite many recent developments, gener-
-          ating diverse posterior samples remains a challenge, as existing methods require
-          restarting the entire generative process for each new sample, making the procedure
-          computationally expensive. In this work, we propose efficient posterior sampling
-          by simulating Langevin dynamics in the noise space of a pre-trained generative
-          model. By exploiting the mapping between the noise and data spaces which can be
-          provided by distilled flows or consistency models, our method enables seamless
-          exploration of the posterior without the need to re-run the full sampling chain,
-          drastically reducing computational overhead. Theoretically, we prove a guarantee
-          for the proposed noise-space Langevin dynamics to approximate the posterior,
-          assuming that the generative model sufficiently approximates the prior distribution.
-          Our framework is experimentally validated on image restoration tasks involving
-          noisy linear and nonlinear forward operators applied to LSUN-Bedroom (256 x
-          256) and ImageNet (64 x 64) datasets. The results demonstrate that our approach
-          generates high-fidelity samples with enhanced semantic diversity even under a limited 
-          number of function evaluations, offering superior efficiency and performance
-          compared to existing diffusion-based posterior sampling techniques.
-        </div>
+          Posterior sampling in high-dimensional spaces using generative models 
+          holds significant promise for various applications, including but not limited to inverse problems and
+          guided generation tasks. Generating diverse posterior samples remains expensive, as existing methods require restart-
+          ing the entire generative process for each new sample. In this
+          work, we propose a posterior sampling approach that simulates Langevin dynamics in the noise space of a pre-trained
+          generative model. By exploiting the mapping between the
+          noise and data spaces which can be provided by distilled
+          flows or consistency models, our method enables seamless
+          exploration of the posterior without the need to re-run the
+          full sampling chain, drastically reducing computational overhead. Theoretically, we prove a guarantee for the proposed
+          noise-space Langevin dynamics to approximate the posterior,
+          assuming that the generative model sufficiently approximates
+          the prior distribution. Our framework is experimentally validated on image restoration tasks involving noisy linear and
+          nonlinear forward operators applied to LSUN-Bedroom (256
+          × 256) and ImageNet (64 × 64) datasets. The results demonstrate that our approach generates high-fidelity samples with
+          enhanced semantic diversity even under a limited number
+          of function evaluations, offering superior efficiency and performance compared to existing diffusion-based posterior
+          sampling techniques.
       </div>
     </div>
   </div>
@@ -219,11 +219,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{purohit_repasky2024,
-      author = {Vishal Purohit*, Matthew Repasky*, Jianfeng Lu, Qiang Qiu, Yao Xie, Xiuyuan Cheng},
-      title  = {Posterior Sampling Via Langevin Dynamics Based on Generative Priors},
-      year   = {2024},
-      booktitle = {arXiv},
+    <pre><code>@inproceedings{purohit_repasky2024,
+      author = {Vishal Purohit, Matthew Repasky, Jianfeng Lu, Qiang Qiu, Yao Xie, Xiuyuan Cheng},
+      title  = {Consistency Posterior Sampling for Diverse Image Synthesis},
+      year   = {2025},
+      booktitle = {CVPR},
 }</code></pre>
   </div>
 </section>
