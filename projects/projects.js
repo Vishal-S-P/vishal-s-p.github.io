@@ -5,7 +5,7 @@ const projects = [
         title: "Decomposed Generative Imaging",
         imageUrl: "assets/paper_assets/2024/decomposed/decomposed.jpg",
         url: "",
-        pub_venue:"Preprint",
+        pub_venue:"Under review",
         TLDR: "Solving linear inverse problems using multiple generative trajectories of diffusion model.",
         authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
         authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://engineering.purdue.edu/~qqiu/"]
