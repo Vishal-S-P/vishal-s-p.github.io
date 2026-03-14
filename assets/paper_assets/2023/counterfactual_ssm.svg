@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" width="220" height="150">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/><stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="150" fill="url(#bg)" rx="6"/>
+
+  <!-- Timeline -->
+  <line x1="20" y1="75" x2="200" y2="75" stroke="#2d3f5a" stroke-width="1.2"/>
+
+  <!-- Observed outcome -->
+  <circle cx="30" cy="75" r="4" fill="#CEB888"/>
+  <circle cx="70" cy="75" r="4" fill="#CEB888"/>
+  <circle cx="110" cy="75" r="4" fill="#CEB888"/>
+  <line x1="30" y1="75" x2="70" y2="75" stroke="#CEB888" stroke-width="1.8"/>
+  <line x1="70" y1="75" x2="110" y2="75" stroke="#CEB888" stroke-width="1.8"/>
+
+  <!-- Counterfactual branch A (up) -->
+  <path d="M 110 75 Q 135 40 160 35 Q 180 32 200 38"
+        stroke="#CEB888" stroke-width="2" fill="none" opacity="0.9"/>
+  <circle cx="160" cy="35" r="3.5" fill="#CEB888" opacity="0.8"/>
+  <circle cx="200" cy="38" r="3.5" fill="#CEB888" opacity="0.8"/>
+  <text x="168" y="28" font-family="sans-serif" font-size="6.5" fill="#CEB888">Y(do A)</text>
+
+  <!-- Counterfactual branch B (down) -->
+  <path d="M 110 75 Q 135 108 160 113 Q 180 116 200 110"
+        stroke="#ddd0a8" stroke-width="1.8" fill="none" stroke-dasharray="4,2" opacity="0.7"/>
+  <circle cx="160" cy="113" r="3.5" fill="#ddd0a8" opacity="0.6"/>
+  <circle cx="200" cy="110" r="3.5" fill="#ddd0a8" opacity="0.6"/>
+  <text x="168" y="128" font-family="sans-serif" font-size="6.5" fill="#ddd0a8">Y(do B)</text>
+
+  <!-- Intervention point -->
+  <line x1="110" y1="55" x2="110" y2="95" stroke="#ff9999" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.7"/>
+  <text x="110" y="50" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#ff9999">intervention</text>
+
+  <!-- SSM state boxes -->
+  <rect x="22" y="83" width="16" height="10" rx="2" fill="#263348" stroke="#2d3f5a" stroke-width="0.8"/>
+  <rect x="62" y="83" width="16" height="10" rx="2" fill="#263348" stroke="#2d3f5a" stroke-width="0.8"/>
+  <rect x="102" y="83" width="16" height="10" rx="2" fill="#263348" stroke="#CEB888" stroke-width="0.8"/>
+  <text x="30" y="91" text-anchor="middle" font-family="monospace" font-size="5" fill="#b8c9dc">s₁</text>
+  <text x="70" y="91" text-anchor="middle" font-family="monospace" font-size="5" fill="#b8c9dc">s₂</text>
+  <text x="110" y="91" text-anchor="middle" font-family="monospace" font-size="5" fill="#CEB888">s₃</text>
+
+  <!-- Label -->
+  <text x="110" y="143" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#CEB888">Counterfactual Prediction · SSM</text>
+</svg>

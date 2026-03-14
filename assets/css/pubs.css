@@ -1,71 +1,9 @@
-.project {
-    border: 5px solid #ccc; /* Light grey border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /*Shadow for 3D effect
-    overflow: hidden; /* Ensures the content respects the border radius */
-    transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
-    background: #fff; /* White background */
-    margin-bottom: 20px; /* Space between cards */
-    /* Default size, which is mobile-first */
-    /* max-width: 300px; Maximum width for large screens */
-    width: 100%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .project:hover {
-    transform: translateY(-10px); /* Slightly raise the card on hover for more 3D effect */
-    box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.15);
-  }
-  
-  .project-image {
-    display: block; /* Display as block to fill the container */
-    height: auto; /* Maintain aspect ratio */
-    border-bottom: 1px solid #ccc; /* Separate image from content */
-    border-top-left-radius: 10px; /* Rounded top-left edge */
-    border-top-right-radius: 10px; /* Rounded top-right edge */
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  
-  .project-content {
-    padding: 15px; /* Padding inside the content area */
-    text-align: left; /* Align text to the left */
-    background: #ffffff; /* Optional: for a white background */
-  }
-  
-  .project-title {
-    font-size: 1.1rem; /* Larger font size for the title */
-    font-weight: 600; /* Increased weight for title prominence */
-    margin-bottom: 5px; /* Space below the title */
-    color: #333; /* Dark color for better readability */
-    text-decoration: none; /* Removes underline from links */
-  }
-  
-  .project-venue {
-    font-size: 0.9rem;
-    font-weight: 400; /* Regular weight for the publication venue */
-    color: #555; /* Slightly lighter than the title for hierarchy */
-    margin-bottom: 10px; /* Space below the venue */
-  }
-  .project-tldr {
-    font-size: 0.9rem; /* Smaller font size for the TLDR */
-    line-height: 1.4; /* Increased line height for readability */
-    font-weight: 400; /* Increased weight for title prominence */
-    color: #666; /* Lighter color to differentiate from title and venue */
-    margin-bottom: 10px; /* Space below the TLDR */
-  }
-  
-  .project-links {
-    display: flex; /* Display links in a row */
-    justify-content: start; /* Align links to the start */
-    gap: 10px; /* Space between links */
-  }
-  
-  .project-link {
-    background: #CEB888; /* Example blue background */
-    color: rgb(0, 0, 0); /* White text color */
-    text-decoration: none; /* No underline on links */
-    padding: 5px 10px; /* Padding inside the link */
-    border-radius: 5px; /* Rounded edges for links */
-    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
-  }
+/* Publication card styles — dark theme overrides from main.css take precedence */
+/* This file retains minimal styles for the dynamically-rendered project cards (projects.js) */
+
+.project-content { flex: 1; min-width: 0; }
+
+.project-link:hover {
+  background: var(--gold, #CEB888);
+  color: #0f172a !important;
+}

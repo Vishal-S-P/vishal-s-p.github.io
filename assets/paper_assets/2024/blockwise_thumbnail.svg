@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" width="220" height="150">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/><stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#CEB888;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#CEB888;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#CEB888;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="150" fill="url(#bg)" rx="6"/>
+
+  <!-- Degraded input image (left) — noisy blocks -->
+  <rect x="10" y="16" width="52" height="52" rx="3" fill="#1e293b" stroke="#2d3f5a" stroke-width="1"/>
+  <rect x="11" y="17" width="25" height="25" fill="#22304a" opacity="0.9"/>
+  <rect x="36" y="17" width="25" height="25" fill="#1a2540" opacity="0.8"/>
+  <rect x="11" y="42" width="25" height="25" fill="#1c2844" opacity="0.85"/>
+  <rect x="36" y="42" width="25" height="25" fill="#243050" opacity="0.9"/>
+  <!-- noise dots -->
+  <rect x="14" y="20" width="3" height="3" fill="#b8c9dc" opacity="0.4"/>
+  <rect x="22" y="28" width="2" height="2" fill="#b8c9dc" opacity="0.3"/>
+  <rect x="40" y="22" width="3" height="2" fill="#b8c9dc" opacity="0.5"/>
+  <rect x="48" y="30" width="2" height="3" fill="#b8c9dc" opacity="0.35"/>
+  <rect x="18" y="45" width="3" height="3" fill="#b8c9dc" opacity="0.4"/>
+  <rect x="50" y="48" width="2" height="2" fill="#b8c9dc" opacity="0.3"/>
+  <rect x="30" y="55" width="3" height="2" fill="#b8c9dc" opacity="0.5"/>
+  <text x="36" y="79" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#b8c9dc">Degraded</text>
+
+  <!-- Divide arrow + label -->
+  <line x1="65" y1="42" x2="75" y2="42" stroke="#CEB888" stroke-width="1.2" opacity="0.7"/>
+  <polygon points="75,38 83,42 75,46" fill="#CEB888" opacity="0.7"/>
+  <text x="74" y="36" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#CEB888">divide</text>
+
+  <!-- Four blocks (center) with diffusion arrows -->
+  <rect x="86" y="16" width="22" height="22" rx="2" fill="#263348" stroke="#CEB888" stroke-width="1"/>
+  <rect x="111" y="16" width="22" height="22" rx="2" fill="#263348" stroke="#CEB888" stroke-width="1"/>
+  <rect x="86" y="41" width="22" height="22" rx="2" fill="#263348" stroke="#CEB888" stroke-width="1"/>
+  <rect x="111" y="41" width="22" height="22" rx="2" fill="#263348" stroke="#CEB888" stroke-width="1"/>
+  <!-- Diffusion noise→clean symbol in each block -->
+  <text x="97" y="30" text-anchor="middle" font-family="monospace" font-size="8" fill="#CEB888">~</text>
+  <text x="122" y="30" text-anchor="middle" font-family="monospace" font-size="8" fill="#CEB888">~</text>
+  <text x="97" y="55" text-anchor="middle" font-family="monospace" font-size="8" fill="#CEB888">~</text>
+  <text x="122" y="55" text-anchor="middle" font-family="monospace" font-size="8" fill="#CEB888">~</text>
+  <text x="104" y="79" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#b8c9dc">Diffuse blocks</text>
+
+  <!-- Aggregate arrow -->
+  <line x1="137" y1="42" x2="147" y2="42" stroke="#CEB888" stroke-width="1.2" opacity="0.7"/>
+  <polygon points="147,38 155,42 147,46" fill="#CEB888" opacity="0.7"/>
+  <text x="146" y="36" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#CEB888">aggregate</text>
+
+  <!-- Clean output image (right) -->
+  <rect x="158" y="16" width="52" height="52" rx="3" fill="#1e293b" stroke="#CEB888" stroke-width="1.5"/>
+  <!-- Clean scene: sky + ground + simple object -->
+  <rect x="159" y="17" width="50" height="22" fill="#1a2744"/>
+  <rect x="159" y="39" width="50" height="28" fill="#1e3328"/>
+  <ellipse cx="184" cy="36" rx="12" ry="9" fill="#263348"/>
+  <ellipse cx="184" cy="36" rx="6" ry="4" fill="#CEB888" opacity="0.4"/>
+  <text x="184" y="79" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#b8c9dc">Restored</text>
+
+  <!-- Bottom label -->
+  <text x="110" y="103" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="600" fill="#f1f5f9">Blockwise Divide-and-Aggregate</text>
+  <text x="110" y="115" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#CEB888">Image Restoration · Diffusion Priors</text>
+
+  <!-- Trajectory dots suggesting diffusion steps -->
+  <circle cx="70" cy="100" r="2" fill="#CEB888" opacity="0.9"/>
+  <circle cx="85" cy="96" r="2" fill="#CEB888" opacity="0.75"/>
+  <circle cx="100" cy="93" r="2" fill="#CEB888" opacity="0.6"/>
+  <circle cx="115" cy="91" r="2" fill="#CEB888" opacity="0.75"/>
+  <circle cx="130" cy="93" r="2" fill="#CEB888" opacity="0.9"/>
+  <path d="M70 100 Q100 88 130 93" stroke="#CEB888" stroke-width="1" fill="none" stroke-dasharray="2,2" opacity="0.5"/>
+  <text x="100" y="128" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#b8c9dc">multi-trajectory sampling</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" width="220" height="150">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/><stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="150" fill="url(#bg)" rx="6"/>
+
+  <!-- Central server -->
+  <rect x="82" y="52" width="56" height="40" rx="5" fill="#263348" stroke="#CEB888" stroke-width="1.5"/>
+  <!-- Shield icon -->
+  <path d="M110,58 L122,63 L122,75 Q122,82 110,86 Q98,82 98,75 L98,63 Z" fill="#CEB888" opacity="0.2"/>
+  <path d="M110,58 L122,63 L122,75 Q122,82 110,86 Q98,82 98,75 L98,63 Z" fill="none" stroke="#CEB888" stroke-width="1.2"/>
+  <text x="110" y="75" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#CEB888">🔒</text>
+  <text x="110" y="100" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#b8c9dc">Fed. Server</text>
+
+  <!-- Hospital client nodes -->
+  <rect x="12" y="16" width="42" height="32" rx="3" fill="#1e293b" stroke="#CEB888" stroke-width="1"/>
+  <text x="33" y="28" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#CEB888">🏥</text>
+  <text x="33" y="38" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#b8c9dc">Hospital A</text>
+  <text x="33" y="46" text-anchor="middle" font-family="sans-serif" font-size="5" fill="#CEB888">trusted</text>
+  <line x1="54" y1="32" x2="82" y2="64" stroke="#CEB888" stroke-width="1" opacity="0.7"/>
+
+  <rect x="166" y="16" width="42" height="32" rx="3" fill="#1e293b" stroke="#CEB888" stroke-width="1"/>
+  <text x="187" y="28" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#CEB888">🏥</text>
+  <text x="187" y="38" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#b8c9dc">Hospital B</text>
+  <text x="187" y="46" text-anchor="middle" font-family="sans-serif" font-size="5" fill="#CEB888">trusted</text>
+  <line x1="166" y1="32" x2="138" y2="64" stroke="#CEB888" stroke-width="1" opacity="0.7"/>
+
+  <!-- Malicious client -->
+  <rect x="88" y="10" width="44" height="30" rx="3" fill="#1e293b" stroke="#ff6b6b" stroke-width="1.2"/>
+  <text x="110" y="22" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#ff6b6b">⚠</text>
+  <text x="110" y="32" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#ff6b6b">Malicious</text>
+  <line x1="110" y1="40" x2="110" y2="52" stroke="#ff6b6b" stroke-width="1" stroke-dasharray="3,2" opacity="0.7"/>
+
+  <!-- Medical scan thumbnail -->
+  <rect x="12" y="96" width="40" height="36" rx="3" fill="#1e293b" stroke="#2d3f5a" stroke-width="1"/>
+  <ellipse cx="32" cy="114" rx="14" ry="10" fill="#263348"/>
+  <ellipse cx="32" cy="114" rx="7" ry="5" fill="#CEB888" opacity="0.3"/>
+  <text x="32" y="130" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#b8c9dc">MRI Scan</text>
+
+  <!-- Label -->
+  <text x="140" y="118" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#b8c9dc">Secure Federated</text>
+  <text x="140" y="130" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#CEB888">Medical Image Classification</text>
+</svg>

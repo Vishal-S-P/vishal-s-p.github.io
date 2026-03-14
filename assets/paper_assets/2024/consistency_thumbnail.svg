@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" width="220" height="150">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/><stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="150" fill="url(#bg)" rx="6"/>
+
+  <!-- Noisy source (left) -->
+  <rect x="10" y="30" width="40" height="40" rx="3" fill="#1e293b" stroke="#2d3f5a" stroke-width="1"/>
+  <!-- Noise texture -->
+  <rect x="12" y="32" width="3" height="3" fill="#CEB888" opacity="0.7"/>
+  <rect x="18" y="36" width="2" height="2" fill="#b8c9dc" opacity="0.5"/>
+  <rect x="25" y="32" width="3" height="2" fill="#CEB888" opacity="0.4"/>
+  <rect x="33" y="37" width="2" height="3" fill="#b8c9dc" opacity="0.6"/>
+  <rect x="40" y="33" width="3" height="2" fill="#CEB888" opacity="0.5"/>
+  <rect x="14" y="42" width="2" height="3" fill="#b8c9dc" opacity="0.4"/>
+  <rect x="22" y="45" width="3" height="2" fill="#CEB888" opacity="0.6"/>
+  <rect x="30" y="42" width="2" height="3" fill="#b8c9dc" opacity="0.3"/>
+  <rect x="38" y="46" width="3" height="2" fill="#CEB888" opacity="0.5"/>
+  <rect x="13" y="52" width="3" height="3" fill="#b8c9dc" opacity="0.4"/>
+  <rect x="24" y="55" width="2" height="2" fill="#CEB888" opacity="0.7"/>
+  <rect x="36" y="53" width="3" height="3" fill="#b8c9dc" opacity="0.5"/>
+  <text x="30" y="81" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#b8c9dc">noisy input z</text>
+
+  <!-- Diverging arrows for diverse sampling -->
+  <line x1="52" y1="50" x2="66" y2="30" stroke="#CEB888" stroke-width="1.2" opacity="0.9"/>
+  <line x1="52" y1="50" x2="66" y2="50" stroke="#CEB888" stroke-width="1.2" opacity="0.7"/>
+  <line x1="52" y1="50" x2="66" y2="70" stroke="#CEB888" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="63,26 70,30 64,34" fill="#CEB888" opacity="0.9"/>
+  <polygon points="63,46 70,50 63,54" fill="#CEB888" opacity="0.7"/>
+  <polygon points="63,66 70,70 64,74" fill="#CEB888" opacity="0.5"/>
+
+  <!-- Output sample A (top) -->
+  <rect x="72" y="16" width="36" height="28" rx="3" fill="#1e293b" stroke="#CEB888" stroke-width="1.2"/>
+  <rect x="73" y="17" width="34" height="12" fill="#1a2744"/>
+  <rect x="73" y="29" width="34" height="14" fill="#1e3328"/>
+  <ellipse cx="90" cy="28" rx="8" ry="6" fill="#263348"/>
+  <ellipse cx="90" cy="28" rx="4" ry="3" fill="#CEB888" opacity="0.4"/>
+
+  <!-- Output sample B (middle) -->
+  <rect x="72" y="50" width="36" height="28" rx="3" fill="#1e293b" stroke="#ddd0a8" stroke-width="1"/>
+  <rect x="73" y="51" width="34" height="16" fill="#1c2030"/>
+  <rect x="73" y="67" width="34" height="10" fill="#1e2a1a"/>
+  <circle cx="84" cy="62" r="6" fill="#263348"/>
+  <circle cx="84" cy="62" r="3" fill="#ddd0a8" opacity="0.3"/>
+  <rect x="94" y="55" width="10" height="14" rx="1" fill="#263348"/>
+
+  <!-- Output sample C (bottom) -->
+  <rect x="72" y="84" width="36" height="28" rx="3" fill="#1e293b" stroke="#CEB888" stroke-width="0.8" opacity="0.7"/>
+  <rect x="73" y="85" width="34" height="10" fill="#20182c"/>
+  <rect x="73" y="95" width="34" height="16" fill="#1e2830"/>
+  <ellipse cx="90" cy="98" rx="10" ry="6" fill="#263348"/>
+  <ellipse cx="90" cy="98" rx="5" ry="3" fill="#CEB888" opacity="0.25"/>
+
+  <!-- Labels for outputs -->
+  <text x="90" y="53" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#CEB888">sample 1</text>
+  <text x="90" y="87" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#b8c9dc">sample 2</text>
+  <text x="90" y="120" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#b8c9dc">sample 3</text>
+
+  <!-- Consistency distillation curve (right) -->
+  <line x1="114" y1="10" x2="114" y2="130" stroke="#2d3f5a" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <path d="M120 20 Q145 40 155 60 Q165 80 155 100 Q145 118 120 128"
+        stroke="#CEB888" stroke-width="2" fill="none" opacity="0.8"/>
+  <circle cx="120" cy="20" r="3" fill="#CEB888"/>
+  <circle cx="155" cy="60" r="3" fill="#CEB888" opacity="0.8"/>
+  <circle cx="155" cy="100" r="3" fill="#CEB888" opacity="0.8"/>
+  <circle cx="120" cy="128" r="3" fill="#CEB888"/>
+  <text x="150" y="15" font-family="monospace" font-size="6" fill="#CEB888">f(x,t)</text>
+  <text x="162" y="60" font-family="monospace" font-size="5.5" fill="#b8c9dc">score</text>
+  <text x="150" y="140" font-family="monospace" font-size="6" fill="#CEB888">posterior</text>
+
+  <!-- Bottom label -->
+  <text x="110" y="143" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#CEB888">Consistency Posterior Sampling · CVPR 2025</text>
+</svg>
