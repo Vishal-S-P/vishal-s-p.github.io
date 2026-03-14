@@ -2,141 +2,375 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Moments: A Photography Portfolio</title>
-  <meta name="description" content="A showcase of my photography capturing various moments.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
+  <title>Vishal Purohit | Moments</title>
+  <meta name="description" content="Photography and moments captured by Vishal Purohit.">
 
-  <!-- Bootstrap CSS-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Font Awesome CSS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <!-- Favicon-->
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/new.css">
+  <!-- Bootstrap & MDB -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" crossorigin="anonymous">
+
+  <!-- Cursive font for location labels -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+
+  <style>
+    /* ---- Moments page ---- */
+    .moments-wrap {
+      max-width: 1100px;
+      margin: 2.5rem auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .moments-header {
+      margin-bottom: 2.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+
+    .moments-header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .moments-header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Masonry via CSS columns */
+    .masonry {
+      column-count: 3;
+      column-gap: 20px;
+    }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 24px;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .masonry-item:hover {
+      transform: translateY(-4px) rotate(0deg);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Polaroid frame */
+    .polaroid {
+      background: #f8f4ef;
+      padding: 8px 8px 56px 8px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), 0 1px 4px rgba(0, 0, 0, 0.3);
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 1px;
+    }
+
+    /* Caption area in the white strip */
+    .polaroid-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 52px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 0 12px;
+    }
+
+    /* ——◆—— divider */
+    .polaroid-divider {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 0;
+    }
+
+    .polaroid-divider::before,
+    .polaroid-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #c8b89a;
+    }
+
+    .polaroid-divider .diamond {
+      width: 5px;
+      height: 5px;
+      background: #CEB888;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+      margin: 0 5px;
+    }
+
+    .polaroid-location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .polaroid-location i {
+      font-size: 0.55rem;
+      color: #a89070;
+      flex-shrink: 0;
+    }
+
+    .polaroid-location span {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: #4a3e30;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Hover overlay on the photo part only */
+    .masonry-item .overlay {
+      position: absolute;
+      top: 8px; left: 8px; right: 8px;
+      bottom: 56px;
+      background: rgba(8, 15, 30, 0.35);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1px;
+    }
+
+    .masonry-item:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay-icon {
+      color: #fff;
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    /* Lightbox */
+    .lb-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 15, 30, 0.95);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .lb-backdrop.active {
+      display: flex;
+    }
+
+    .lb-img-wrap {
+      max-width: 90vw;
+      max-height: 85vh;
+      position: relative;
+    }
+
+    .lb-img-wrap img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .lb-close {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.5rem;
+      color: var(--text-muted);
+      font-size: 1.6rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: color 0.2s;
+      z-index: 10000;
+    }
+
+    .lb-close:hover { color: var(--gold); }
+
+    .lb-nav {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1.8rem;
+      cursor: pointer;
+      background: rgba(15, 23, 42, 0.6);
+      border: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+      z-index: 10000;
+    }
+
+    .lb-nav:hover { color: var(--gold); background: rgba(15, 23, 42, 0.9); }
+    .lb-prev { left: 1rem; }
+    .lb-next { right: 1rem; }
+
+    .lb-counter {
+      margin-top: 0.8rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .masonry { column-count: 2; }
+    }
+    @media (max-width: 480px) {
+      .masonry { column-count: 1; }
+    }
+  </style>
 </head>
-<body>
-  <div class="gallery-container">
-    <!-- Each gallery item is a link that can be clicked to view the full-sized image -->
-    <div class="gallery-item">
-      <a href="img/portfolio/img14.jpeg">
-        <img src="img/portfolio/img14.jpeg">
-      </a>
-    </div>
-    <div class="gallery-item">
-      <a href="img/portfolio/img5.jpeg">
-        <img src="img/portfolio/img5.jpeg">
-      </a>
-      
-    </div>
-    <div class="gallery-item">
-      <a href="img/portfolio/img21.jpeg">
-        <img src="img/portfolio/img21.jpeg">
-      </a>
-      
-    </div>
-    <!-- Repeat for each image -->
-  </div>
-  <div class="gallery-container">
-    <div class="gallery-item">
-      <a href="img/portfolio/img27.png">
-        <img src="img/portfolio/img27.png">
-      </a>
-      
-    </div>
-    <div class="gallery-item">
-      <a href="img/portfolio/img26.png">
-        <img src="img/portfolio/img26.png">
-      </a>
-      
-    </div>
-  </div>
-  <div class="gallery-container">
-    <div class="gallery-item">
-      <a href="img/portfolio/img19.jpeg">
-        <img src="img/portfolio/img19.jpeg">
-      </a>
-      
-    </div>
-  </div> 
-  <div class="gallery-container">
 
-    <div class="gallery-item">
-      <a href="img/portfolio/img25.png">
-        <img src="img/portfolio/img25.png">
-      </a>
-      
-    </div>
-    <div class="gallery-item">
-      <a href="img/portfolio/img24.png">
-        <img src="img/portfolio/img24.png">
-      </a>
-      
-    </div>
-  </div>
-  <div class="gallery-container">
-    <div class="gallery-item">
-      <a href="img/portfolio/img22.jpeg">
-        <img src="img/portfolio/img22.jpeg">
-      </a>
-      
-    </div>
-  </div> 
-  <div class="gallery-container">
-    <div class="gallery-item">
-      <a href="img/portfolio/img9.jpeg">
-        <img src="img/portfolio/img9.jpeg">
-      </a>
-      
-    </div>
-    <div class="gallery-item">
-      <a href="img/portfolio/img8.jpeg">
-        <img src="img/portfolio/img8.jpeg">
-      </a>
-      
-    </div>
-    <div class="gallery-item">
-      <a href="img/portfolio/img7.jpeg">
-        <img src="img/portfolio/img7.jpeg">
-      </a>
-      
-    </div>
-  </div>
-  <div class="gallery-container">
-    <div class="gallery-item">
-      <a href="img/portfolio/img6.jpeg">
-        <img src="img/portfolio/img6.jpeg">
-      </a>
-      
-    </div>
-    <div class="gallery-item">
-      <a href="img/portfolio/img3.jpeg">
-        <img src="img/portfolio/img3.jpeg">
-      </a>
-      
-    </div>
-    <div class="gallery-item">
-      <a href="img/portfolio/img2.jpeg">
-        <img src="img/portfolio/img2.jpeg">
-      </a>
-      
-    </div>
-  </div>
-</body>
+<body class="fixed-top-nav">
 
-  <!-- Footer -->
-  <footer class="text-center text-lg-start text-muted">
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <p>&copy; <a href="http://vishal-s-p.github.io" target="_blank">Vishal Purohit</a> 2025. All rights reserved.</p>
-    </section>
-  </footer>
+  <!-- Navbar -->
+  <header>
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          <span class="font-weight-bold">Vishal</span> Purohit
+        </a>
+        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item">
+              <a class="nav-link" href="/">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../publications/">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../cv/">CV</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../moments/">Moments <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  <!-- JavaScript files-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <!-- Content -->
+  <div class="moments-wrap">
+    <div class="moments-header">
+      <h1>Moments</h1>
+      <p>A collection of photographs from travels, research life, and everyday beauty.</p>
+    </div>
+
+    <div class="masonry" id="gallery"></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lb-backdrop" id="lightbox">
+    <button class="lb-close" id="lb-close"><i class="fas fa-times"></i></button>
+    <button class="lb-nav lb-prev" id="lb-prev"><i class="fas fa-chevron-left"></i></button>
+    <div class="lb-img-wrap">
+      <img id="lb-img" src="" alt="Full size">
+    </div>
+    <button class="lb-nav lb-next" id="lb-next"><i class="fas fa-chevron-right"></i></button>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+
+  <!-- Photo data — edit locations in photos.js, run update-gallery.py to add new images -->
+  <script src="photos.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="../assets/js/common.js"></script>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    const lb      = document.getElementById('lightbox');
+    const lbImg   = document.getElementById('lb-img');
+    const lbCtr   = document.getElementById('lb-counter');
+    let current   = 0;
+
+    // Build grid from PHOTOS array in photos.js
+    PHOTOS.forEach((photo, i) => {
+      const loc = photo.location || '';
+      gallery.insertAdjacentHTML('beforeend', `
+        <div class="masonry-item" data-index="${i}">
+          <div class="polaroid">
+            <img src="${photo.file}" alt="Moment" loading="lazy">
+            <div class="polaroid-caption">
+              <div class="polaroid-divider"><div class="diamond"></div></div>
+              <div class="polaroid-location">
+                ${loc ? '<i class="fas fa-map-marker-alt"></i>' : ''}
+                <span>${loc || '&nbsp;'}</span>
+              </div>
+            </div>
+          </div>
+          <div class="overlay"><span class="overlay-icon"><i class="fas fa-expand-alt"></i></span></div>
+        </div>`);
+    });
+
+    // Lightbox
+    function openLB(idx) {
+      current = (idx + PHOTOS.length) % PHOTOS.length;
+      lbImg.src = PHOTOS[current].file;
+      lbCtr.textContent = (current + 1) + ' / ' + PHOTOS.length;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLB() {
+      lb.classList.remove('active');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+
+    gallery.addEventListener('click', e => {
+      const item = e.target.closest('.masonry-item');
+      if (item) openLB(parseInt(item.dataset.index));
+    });
+
+    document.getElementById('lb-close').addEventListener('click', closeLB);
+    document.getElementById('lb-prev').addEventListener('click', () => openLB(current - 1));
+    document.getElementById('lb-next').addEventListener('click', () => openLB(current + 1));
+    lb.addEventListener('click', e => { if (e.target === lb) closeLB(); });
+
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('active')) return;
+      if (e.key === 'Escape')      closeLB();
+      if (e.key === 'ArrowLeft')   openLB(current - 1);
+      if (e.key === 'ArrowRight')  openLB(current + 1);
+    });
+  </script>
 </body>
 </html>

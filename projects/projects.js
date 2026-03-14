@@ -1,14 +1,53 @@
 
 // Array of project objects containing project details
 const projects = [
-    { 
-        title: "Decomposed Generative Imaging",
-        imageUrl: "assets/paper_assets/2024/decomposed/decomposed.jpg",
+    {
+        title: "Learning Continuous Representations for Improved Video Understanding in Vision-Language Models",
+        imageUrl: "assets/paper_assets/2025/continuous_video_vlm.svg",
         url: "",
-        pub_venue:"Under review",
+        pub_venue:"Under Review",
+        TLDR: "",
+        authors: "Seunghyun Hwang, Vishal Purohit, Qiang Qiu",
+        authors_links: ["https://scholar.google.com/citations?user=hn3bN5kAAAAJ&hl=ko", "https://vishal-s-p.github.io/", "https://engineering.purdue.edu/~qqiu/"]
+    ,
+    paper_link:"",
+    // code_link:"./",
+    // project_website: "./"
+    },
+    {
+        title: "Learning Temporal Direction via Latent Phase Conjugation for Video Understanding",
+        imageUrl: "assets/paper_assets/2025/temporal_direction.svg",
+        url: "",
+        pub_venue:"Under Review",
+        TLDR: "",
+        authors: "Vishal Purohit, Seunghyun Hwang, Qiang Qiu",
+        authors_links: ["https://vishal-s-p.github.io/", "https://scholar.google.com/citations?user=hn3bN5kAAAAJ&hl=ko","https://engineering.purdue.edu/~qqiu/"]
+    ,
+    paper_link:"",
+    // code_link:"./",
+    // project_website: "./"
+    },
+    {
+        title: "When Noise Structure Matters: Semantic Sensitivity to Token-Space Transformations in Visual Generative Models",
+        imageUrl: "assets/paper_assets/2025/noise_structure.svg",
+        url: "",
+        pub_venue:"Under Review",
+        TLDR: "",
+        authors: "Vishal Purohit, Wei Chen, Jeeyung Kim, Qiang Qiu",
+        authors_links: ["https://vishal-s-p.github.io/","https://weichennone.github.io/myhomepage/", "https://scholar.google.com/citations?user=XrZUypcAAAAJ&hl=en","https://engineering.purdue.edu/~qqiu/"]
+    ,
+    paper_link:"",
+    // code_link:"./",
+    // project_website: "./"
+    },
+    { 
+        title: "Blockwise Divide-and-Aggregate for Image Restoration using Diffusion Priors",
+        imageUrl: "assets/paper_assets/2024/blockwise_thumbnail.svg",
+        url: "",
+        pub_venue:"IEEE Computer Vision and Pattern Recognition Findings (CVPR), 2026",
         TLDR: "Solving linear inverse problems using multiple generative trajectories of diffusion model.",
-        authors: "Vishal Purohit, Ze Wang, Qiang Qiu",
-        authors_links: ["https://vishal-s-p.github.io/","https://zewang95.github.io/", "https://engineering.purdue.edu/~qqiu/"]
+        authors: "Vishal Purohit, Wei Chen, Qiang Qiu",
+        authors_links: ["https://vishal-s-p.github.io/","https://weichennone.github.io/myhomepage/", "https://engineering.purdue.edu/~qqiu/"]
     ,
     paper_link:"",
     // code_link:"./",
@@ -16,7 +55,7 @@ const projects = [
     },
     { 
         title: "Consistency Posterior Sampling for Diverse Image Synthesis",
-        imageUrl: "assets/paper_assets/2024/posterior_sampling/posterior_title_fig.jpg",
+        imageUrl: "assets/paper_assets/2024/consistency_thumbnail.svg",
         url: "https://arxiv.org/abs/2410.02078",
         pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2025",
         TLDR: "Posterior sampling for diverse image synthesis using distilled flow models.",
@@ -29,7 +68,7 @@ const projects = [
     },
     { 
         title: "Generative Quanta Color Imaging",
-        imageUrl: "assets/paper_assets/2023/generative_quanta_color/Generative_Quata_Color_Cover.png",
+        imageUrl: "assets/paper_assets/2023/quanta_thumbnail.svg",
         url: "projects/2023/generative_quanta_color.html",
         pub_venue:"IEEE Computer Vision and Pattern Recognition (CVPR), 2024",
         TLDR: "Colorization of one-bit images under adverse exposure conditions",
@@ -88,6 +127,11 @@ function createProjectBlocks() {
             } else {
                 // If no link, just use a span
                 authorElement = document.createElement("span");
+            }
+            const isMe = author.replace('*', '').trim() === 'Vishal Purohit';
+            if (isMe) {
+                authorElement.style.color = 'var(--gold)';
+                authorElement.style.fontWeight = '600';
             }
             authorElement.textContent = author;
             authors.appendChild(authorElement);

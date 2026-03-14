@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" width="220" height="150">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <rect width="220" height="150" fill="url(#bg3)" rx="6"/>
+
+  <!-- Noisy image (left box) -->
+  <rect x="12" y="18" width="56" height="56" rx="4" fill="#0f172a" stroke="#2d3f5a" stroke-width="1"/>
+  <!-- Noise pixels -->
+  <rect x="14" y="20" width="4" height="4" fill="#CEB888" opacity="0.8"/>
+  <rect x="20" y="24" width="3" height="3" fill="#b8c9dc" opacity="0.5"/>
+  <rect x="28" y="20" width="5" height="3" fill="#CEB888" opacity="0.4"/>
+  <rect x="36" y="26" width="3" height="5" fill="#ddd0a8" opacity="0.6"/>
+  <rect x="44" y="20" width="4" height="4" fill="#CEB888" opacity="0.7"/>
+  <rect x="52" y="23" width="3" height="3" fill="#b8c9dc" opacity="0.4"/>
+  <rect x="16" y="30" width="5" height="3" fill="#ddd0a8" opacity="0.5"/>
+  <rect x="24" y="33" width="4" height="4" fill="#CEB888" opacity="0.6"/>
+  <rect x="34" y="30" width="3" height="5" fill="#b8c9dc" opacity="0.3"/>
+  <rect x="42" y="34" width="5" height="3" fill="#CEB888" opacity="0.5"/>
+  <rect x="52" y="30" width="4" height="4" fill="#ddd0a8" opacity="0.7"/>
+  <rect x="14" y="40" width="3" height="5" fill="#CEB888" opacity="0.4"/>
+  <rect x="22" y="42" width="5" height="3" fill="#b8c9dc" opacity="0.6"/>
+  <rect x="30" y="40" width="4" height="4" fill="#CEB888" opacity="0.8"/>
+  <rect x="40" y="43" width="3" height="5" fill="#ddd0a8" opacity="0.4"/>
+  <rect x="48" y="40" width="5" height="3" fill="#CEB888" opacity="0.5"/>
+  <rect x="56" y="44" width="4" height="4" fill="#b8c9dc" opacity="0.3"/>
+  <rect x="14" y="52" width="4" height="4" fill="#ddd0a8" opacity="0.6"/>
+  <rect x="22" y="54" width="3" height="4" fill="#CEB888" opacity="0.4"/>
+  <rect x="30" y="52" width="5" height="3" fill="#b8c9dc" opacity="0.5"/>
+  <rect x="40" y="55" width="4" height="4" fill="#CEB888" opacity="0.7"/>
+  <rect x="50" y="52" width="3" height="5" fill="#ddd0a8" opacity="0.5"/>
+  <rect x="58" y="55" width="4" height="3" fill="#CEB888" opacity="0.6"/>
+  <text x="40" y="85" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#b8c9dc">Noise Input</text>
+
+  <!-- Arrow with transform label -->
+  <line x1="72" y1="46" x2="96" y2="46" stroke="#CEB888" stroke-width="1.5"/>
+  <polygon points="96,42 106,46 96,50" fill="#CEB888"/>
+  <text x="89" y="40" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#CEB888">T(·)</text>
+  <text x="89" y="58" text-anchor="middle" font-family="sans-serif" font-size="5.5" fill="#b8c9dc">token-space</text>
+
+  <!-- Output image (right box — structured) -->
+  <rect x="110" y="18" width="56" height="56" rx="4" fill="#0f172a" stroke="#CEB888" stroke-width="1.2"/>
+  <!-- Structured pattern (e.g. a simple scene silhouette) -->
+  <rect x="112" y="20" width="52" height="30" fill="#1e293b"/>
+  <!-- Sky gradient suggestion -->
+  <rect x="112" y="20" width="52" height="10" fill="#0f172a" opacity="0.5"/>
+  <!-- Ground -->
+  <rect x="112" y="50" width="52" height="24" fill="#1e293b"/>
+  <!-- Simple house shape -->
+  <polygon points="136,32 148,22 160,32" fill="#2d3f5a"/>
+  <rect x="138" y="32" width="20" height="18" fill="#263348"/>
+  <rect x="144" y="38" width="8" height="10" fill="#CEB888" opacity="0.5"/>
+  <text x="138" y="85" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#b8c9dc">Semantic Output</text>
+
+  <!-- Sensitivity heatmap / spectrum bar -->
+  <rect x="174" y="18" width="34" height="56" rx="3" fill="#0f172a" stroke="#2d3f5a" stroke-width="1"/>
+  <!-- Gradient bar simulating sensitivity -->
+  <rect x="176" y="20" width="30" height="9" fill="#CEB888" opacity="0.9"/>
+  <rect x="176" y="30" width="30" height="9" fill="#CEB888" opacity="0.65"/>
+  <rect x="176" y="40" width="30" height="9" fill="#CEB888" opacity="0.35"/>
+  <rect x="176" y="50" width="30" height="9" fill="#CEB888" opacity="0.15"/>
+  <rect x="176" y="60" width="30" height="9" fill="#CEB888" opacity="0.05"/>
+  <text x="191" y="85" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#b8c9dc">Sensitivity</text>
+
+  <!-- Bottom label -->
+  <text x="110" y="110" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#b8c9dc">Noise Structure in Generative Models</text>
+  <text x="110" y="122" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#CEB888">Token-Space Transformations</text>
+</svg>

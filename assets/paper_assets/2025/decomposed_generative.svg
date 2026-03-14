@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" width="220" height="150">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/><stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="150" fill="url(#bg)" rx="6"/>
+
+  <!-- Source image block -->
+  <rect x="12" y="22" width="44" height="44" rx="4" fill="#1e293b" stroke="#2d3f5a" stroke-width="1"/>
+  <circle cx="34" cy="44" r="12" fill="#263348" stroke="#CEB888" stroke-width="1.2"/>
+  <circle cx="34" cy="44" r="6" fill="#CEB888" opacity="0.5"/>
+  <text x="34" y="77" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#b8c9dc">Input</text>
+
+  <!-- Decompose arrow -->
+  <line x1="60" y1="44" x2="72" y2="44" stroke="#CEB888" stroke-width="1.5"/>
+  <polygon points="72,40 82,44 72,48" fill="#CEB888"/>
+
+  <!-- Component 1 -->
+  <rect x="86" y="14" width="36" height="28" rx="3" fill="#1e293b" stroke="#CEB888" stroke-width="1" opacity="0.9"/>
+  <path d="M90 32 Q104 18 118 28" stroke="#CEB888" stroke-width="1.5" fill="none"/>
+  <text x="104" y="52" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#CEB888">Structure</text>
+
+  <!-- Component 2 -->
+  <rect x="86" y="60" width="36" height="28" rx="3" fill="#1e293b" stroke="#ddd0a8" stroke-width="1" opacity="0.7"/>
+  <rect x="90" y="64" width="6" height="20" fill="#ddd0a8" opacity="0.4"/>
+  <rect x="98" y="68" width="6" height="16" fill="#ddd0a8" opacity="0.6"/>
+  <rect x="106" y="72" width="6" height="12" fill="#ddd0a8" opacity="0.5"/>
+  <rect x="114" y="66" width="6" height="18" fill="#ddd0a8" opacity="0.3"/>
+  <text x="104" y="99" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#b8c9dc">Texture</text>
+
+  <!-- Aggregate arrow -->
+  <line x1="126" y1="28" x2="138" y2="44" stroke="#CEB888" stroke-width="1.2" opacity="0.7"/>
+  <line x1="126" y1="74" x2="138" y2="58" stroke="#CEB888" stroke-width="1.2" opacity="0.7"/>
+  <polygon points="138,40 148,44 138,48" fill="#CEB888"/>
+
+  <!-- Output -->
+  <rect x="150" y="22" width="58" height="56" rx="4" fill="#1e293b" stroke="#CEB888" stroke-width="1.5"/>
+  <circle cx="179" cy="50" r="18" fill="#263348"/>
+  <circle cx="179" cy="50" r="10" fill="#CEB888" opacity="0.25"/>
+  <circle cx="179" cy="50" r="4" fill="#CEB888" opacity="0.6"/>
+  <text x="179" y="91" text-anchor="middle" font-family="sans-serif" font-size="6.5" fill="#b8c9dc">Generated</text>
+
+  <!-- Bottom label -->
+  <text x="110" y="115" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#b8c9dc">Decomposed Generative Imaging</text>
+  <text x="110" y="127" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#CEB888">Structure · Texture · Synthesis</text>
+</svg>

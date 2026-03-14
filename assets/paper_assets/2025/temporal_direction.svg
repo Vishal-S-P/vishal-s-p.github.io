@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" width="220" height="150">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#CEB888;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#CEB888;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#CEB888;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="220" height="150" fill="url(#bg2)" rx="6"/>
+
+  <!-- Timeline axis -->
+  <line x1="18" y1="75" x2="202" y2="75" stroke="#2d3f5a" stroke-width="1.5"/>
+  <polygon points="202,71 212,75 202,79" fill="#2d3f5a"/>
+
+  <!-- Forward wave (top) -->
+  <path d="M 25 75 Q 45 45 65 75 Q 85 105 105 75 Q 125 45 145 75 Q 165 105 185 75"
+        stroke="#CEB888" stroke-width="2" fill="none" opacity="0.9"/>
+  <!-- Arrow at end of forward -->
+  <polygon points="185,71 197,75 185,79" fill="#CEB888" opacity="0.9"/>
+
+  <!-- Conjugate / reverse wave (dashed, below) -->
+  <path d="M 185 75 Q 165 48 145 75 Q 125 102 105 75 Q 85 48 65 75 Q 45 102 25 75"
+        stroke="#ddd0a8" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.55"/>
+  <polygon points="25,71 14,75 25,79" fill="#ddd0a8" opacity="0.55"/>
+
+  <!-- Phase markers -->
+  <circle cx="65" cy="75" r="3.5" fill="#CEB888"/>
+  <circle cx="105" cy="75" r="3.5" fill="#CEB888"/>
+  <circle cx="145" cy="75" r="3.5" fill="#CEB888"/>
+
+  <!-- t labels -->
+  <text x="18" y="92" font-family="monospace" font-size="8" fill="#b8c9dc">t₀</text>
+  <text x="100" y="92" font-family="monospace" font-size="8" fill="#b8c9dc">t</text>
+  <text x="196" y="92" font-family="monospace" font-size="8" fill="#b8c9dc">T</text>
+
+  <!-- Labels -->
+  <text x="110" y="116" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#b8c9dc">Temporal Direction Learning</text>
+  <text x="110" y="128" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#CEB888">Latent Phase Conjugation</text>
+
+  <!-- Legend -->
+  <line x1="30" y1="138" x2="48" y2="138" stroke="#CEB888" stroke-width="1.5"/>
+  <text x="51" y="141" font-family="sans-serif" font-size="6" fill="#b8c9dc">Forward</text>
+  <line x1="90" y1="138" x2="108" y2="138" stroke="#ddd0a8" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="111" y="141" font-family="sans-serif" font-size="6" fill="#b8c9dc">Conjugate</text>
+</svg>
