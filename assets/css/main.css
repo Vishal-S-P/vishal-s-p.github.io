@@ -54,7 +54,7 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 
 .navbar-brand.title {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--text) !important;
   letter-spacing: 0.02em;
@@ -70,7 +70,7 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 
 .navbar .nav-link {
   color: var(--text-muted) !important;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   font-weight: 500;
   padding: 0.5rem 0.9rem !important;
   transition: color 0.2s;
