@@ -6,7 +6,7 @@ const projects = [
         imageUrl: "assets/paper_assets/2025/continuous_video_vlm.svg",
         url: "",
         pub_venue:"Under Review",
-        TLDR: "",
+        TLDR: "We introduce continuous temporal representations for vision-language models, enabling smoother modeling of video dynamics and improved performance on video understanding tasks.",
         authors: "Seunghyun Hwang, Vishal Purohit, Qiang Qiu",
         authors_links: ["https://scholar.google.com/citations?user=hn3bN5kAAAAJ&hl=ko", "https://vishal-s-p.github.io/", "https://engineering.purdue.edu/~qqiu/"]
     ,
@@ -15,25 +15,12 @@ const projects = [
     // project_website: "./"
     },
     {
-        title: "Learning Temporal Direction via Latent Phase Conjugation for Video Understanding",
-        imageUrl: "assets/paper_assets/2025/temporal_direction.svg",
-        url: "",
-        pub_venue:"Under Review",
-        TLDR: "",
-        authors: "Vishal Purohit, Seunghyun Hwang, Qiang Qiu",
-        authors_links: ["https://vishal-s-p.github.io/", "https://scholar.google.com/citations?user=hn3bN5kAAAAJ&hl=ko","https://engineering.purdue.edu/~qqiu/"]
-    ,
-    paper_link:"",
-    // code_link:"./",
-    // project_website: "./"
-    },
-    {
-        title: "When Noise Structure Matters: Semantic Sensitivity to Token-Space Transformations in Visual Generative Models",
+        title: "When Noise Order Matters: Token-Space Transformations in Multimodal Diffusion Transformers",
         imageUrl: "assets/paper_assets/2025/noise_structure.svg",
         url: "",
         pub_venue:"Under Review",
-        TLDR: "",
-        authors: "Vishal Purohit, Wei Chen, Jeeyung Kim, Qiang Qiu",
+        TLDR: "Although Gaussian noise is distributionally invariant, its spatial arrangement matters: global token-space transformations (e.g., flips, rotations) induce major semantic changes in generated outputs, while local perturbations have minimal effect.",
+        authors: "Vishal Purohit, Wei Chen, Qiang Qiu",
         authors_links: ["https://vishal-s-p.github.io/","https://weichennone.github.io/myhomepage/", "https://scholar.google.com/citations?user=XrZUypcAAAAJ&hl=en","https://engineering.purdue.edu/~qqiu/"]
     ,
     paper_link:"",
@@ -44,7 +31,7 @@ const projects = [
         title: "Blockwise Divide-and-Aggregate for Image Restoration using Diffusion Priors",
         imageUrl: "assets/paper_assets/2024/blockwise_thumbnail.svg",
         url: "",
-        pub_venue:"IEEE Computer Vision and Pattern Recognition Findings (CVPR), 2026",
+        pub_venue:"IEEE Computer Vision and Pattern Recognition Findings (CVPRF), 2026",
         TLDR: "Solving linear inverse problems using multiple generative trajectories of diffusion model.",
         authors: "Vishal Purohit, Wei Chen, Qiang Qiu",
         authors_links: ["https://vishal-s-p.github.io/","https://weichennone.github.io/myhomepage/", "https://engineering.purdue.edu/~qqiu/"]
