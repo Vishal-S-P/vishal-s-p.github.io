@@ -14,10 +14,10 @@
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="./static/css/project-theme.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -55,7 +55,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Generative Quanta Color Imaging.</h1>
+          <h1 class="title is-1 publication-title">Generative Quanta Color Imaging</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
                 <a href="../../index.html" target="_blank">Vishal Purohit, </a>
@@ -78,8 +78,8 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <p><span class="author-block">Elmore Family School of Electrical and Computer Engineering</span></p>
-            <span class="author-block">Purdue University, USA</span>
+            <p><span class="author-block">Elmore Family School of Electrical and Computer Engineering, Purdue University, USA</span></p>
+            <p><span class="venue-badge">IEEE Computer Vision and Pattern Recognition (CVPR), 2024</span></p>
           </div>
 
           <div class="column has-text-centered">
@@ -176,9 +176,10 @@
       <img src="./static/images/our_method_proj_1.png" alt="Descriptive text about the image">
       <div class="im_caption">
       <figcaption>An illustration of our proposed method for exposure adaptive colorization: A binary image, \(\mathbf{Y}\), which can be overexposed or underexposed, is input into the proposed exposure synthesis module. The colorization of binary image can be achieved using Single Image Colorization (SIC) or Burst Image Colorization (BIC). (i) <b>SIC:</b> Based on the input and target exposure levels, \(\widetilde\theta_\text{input}\) and \(\widetilde\theta_\text{target}\), this module adjusts the weights of a exposure synthesis network \(\mathcal{G}\), which then generates an exposure-corrected image. Note that corrected image is not necessarily a binary image. Since the colorization module \(\mathcal{F}\) is trained to colorize only image of specific exposure, the exposure synthesis module ensures corrected binary image has similar exposure to the one on which \(\mathcal{F}\) is trained. (\romannumeral 2) <b>BIC:</b> For BIC we generate images with varying exposures as input to the burst image colorization network, \(\mathcal{F}_{\text{burst}}\). The trained network is able to exploit the complementary information across multiple exposures with the help of Cross Non-Local Fusion blocks to synthesize colors in regions of the image that is otherwise not possible by SIC approach.</figcaption>
-      
+
     </div>
     </div>
+  </div>
 </section>
 <!--Exposure Correction Examples-->
 <section class="section">
@@ -357,122 +358,11 @@
         <div class="image-container">
           <img src="./static/images/exp_correction_imgs/flickr_cat_000182_8_synthesized_image_8_real_image.png" alt="Output Image"></div>
     </div>
-      
-      <div class="row">
-        <img src="image4.jpg" alt="Image 4">
-        <img src="image5.jpg" alt="Image 5">
-        <img src="image6.jpg" alt="Image 6">
-        <!-- Add more images for the second row -->
-      </div>
-    </div>
-    
-    <div class="line-between"></div> <!-- Line between rows 2 and 3 -->
-    <div class="gallery-container">
-    <div class="image-gallery">
-    <div class="row">
-        <img src="image7.jpg" alt="Image 7">
-        <img src="image8.jpg" alt="Image 8">
-        <img src="image9.jpg" alt="Image 9">
-        <!-- Add more images for the third row -->
-    </div>
-    <div class="row">
-        <img src="image10.jpg" alt="Image 10">
-        <img src="image11.jpg" alt="Image 11">
-        <img src="image12.jpg" alt="Image 12">
-        <!-- Add more images for the fourth row -->
     </div>
   </div>
-</div>
-</div>
 </div>
 </section>
 
-<div class="container is-max-desktop">
-  <div class="gallery-container">
-    <h2 class="title is-3">Burst Image Colorization Results</h2>
-      <div class="image-gallery">
-        <div class="row">
-          <img src="image1.jpg" alt="Image 1">
-          <img src="image2.jpg" alt="Image 2">
-          <img src="image3.jpg" alt="Image 3">
-          <!-- Add as many images as you like here -->
-      </div>
-      
-      <div class="row">
-        <img src="image4.jpg" alt="Image 4">
-        <img src="image5.jpg" alt="Image 5">
-        <img src="image6.jpg" alt="Image 6">
-        <!-- Add more images for the second row -->
-      </div>
-    </div>
-    
-    <div class="line-between"></div> <!-- Line between rows 2 and 3 -->
-    <div class="gallery-container">
-    <div class="image-gallery">
-    <div class="row">
-        <img src="image7.jpg" alt="Image 7">
-        <img src="image8.jpg" alt="Image 8">
-        <img src="image9.jpg" alt="Image 9">
-        <!-- Add more images for the third row -->
-    </div>
-    <div class="row">
-        <img src="image10.jpg" alt="Image 10">
-        <img src="image11.jpg" alt="Image 11">
-        <img src="image12.jpg" alt="Image 12">
-        <!-- Add more images for the fourth row -->
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div class="container is-max-desktop">
-  <div class="gallery-container">
-    <h2 class="title is-3">Colorization Results on Real World Data</h2>
-      <div class="image-gallery">
-        <div class="row">
-          <img src="image1.jpg" alt="Image 1">
-          <img src="image2.jpg" alt="Image 2">
-          <img src="image3.jpg" alt="Image 3">
-          <!-- Add as many images as you like here -->
-      </div>
-      
-      <div class="row">
-        <img src="image4.jpg" alt="Image 4">
-        <img src="image5.jpg" alt="Image 5">
-        <img src="image6.jpg" alt="Image 6">
-        <!-- Add more images for the second row -->
-      </div>
-    </div>
-    <div class="gallery-container">
-    <div class="image-gallery">
-    <div class="row">
-        <img src="image7.jpg" alt="Image 7">
-        <img src="image8.jpg" alt="Image 8">
-        <img src="image9.jpg" alt="Image 9">
-        <!-- Add more images for the third row -->
-    </div>
-    <div class="row">
-        <img src="image10.jpg" alt="Image 10">
-        <img src="image11.jpg" alt="Image 11">
-        <img src="image12.jpg" alt="Image 12">
-        <!-- Add more images for the fourth row -->
-    </div>
-  </div>
-</div>
-</div>
-</div>
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="" 
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
-</section>
 
 
 <section class="section" id="BibTeX">

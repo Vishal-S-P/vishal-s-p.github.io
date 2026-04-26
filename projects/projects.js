@@ -38,9 +38,9 @@ const projects = [
     ,
     paper_link:"",
     // code_link:"./",
-    // project_website: "./"
+    project_website: "./projects/2024/blockwise_divide_and_aggregate.html"
     },
-    { 
+    {
         title: "Consistency Posterior Sampling for Diverse Image Synthesis",
         imageUrl: "assets/paper_assets/2024/consistency_thumbnail.svg",
         url: "https://arxiv.org/abs/2410.02078",
@@ -85,20 +85,25 @@ function createProjectBlocks() {
         const projectContent = document.createElement("div");
         projectContent.classList.add("project-content");
 
-        const projectTitle = document.createElement("a");
+        const titleHref = project.url || project.project_website || "";
+        const projectTitle = document.createElement(titleHref ? "a" : "span");
         projectTitle.classList.add("project-title");
         projectTitle.textContent = project.title;
-        projectTitle.href = project.url;
-        projectTitle.target = "_blank";
+        if (titleHref) {
+            projectTitle.href = titleHref;
+            projectTitle.target = "_blank";
+        }
 
         const projectVenue = document.createElement("div");
         projectVenue.classList.add("project-venue");
-        projectVenue.textContent = `${project.pub_venue}`;
-
-        const projectTLDR = document.createElement("p");
-        projectTLDR.classList.add("project-tldr");
-        
-        projectTLDR.textContent = `TLDR: ${project.TLDR}`;
+        if (project.pub_venue === "Under Review") {
+            const badge = document.createElement("span");
+            badge.classList.add("badge-under-review");
+            badge.textContent = "Under Review";
+            projectVenue.appendChild(badge);
+        } else {
+            projectVenue.textContent = project.pub_venue;
+        }
 
         const authors = document.createElement("div");
         authors.classList.add("project-authors");
@@ -171,7 +176,6 @@ function createProjectBlocks() {
         projectContent.appendChild(projectTitle);
         projectContent.appendChild(projectVenue);
         projectContent.appendChild(authors);
-        projectContent.appendChild(projectTLDR);
         projectContent.appendChild(linksContainer);
 
         // Append the projectImage and projectContent to the projectBlock

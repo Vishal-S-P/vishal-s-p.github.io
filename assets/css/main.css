@@ -3,7 +3,7 @@
    Dark Navy + Purdue Gold Theme
    ============================================================ */
 
-/* Apple system font — no import needed */
+/* Inter loaded via Google Fonts in each page <head> */
 
 /* ---- CSS Variables ---- */
 :root {
@@ -30,7 +30,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -53,7 +53,7 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 }
 
 .navbar-brand.title {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--text) !important;
@@ -201,6 +201,27 @@ a:hover { color: var(--gold-light); text-decoration: none; }
   line-height: 1.4;
 }
 
+.sidebar .cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 0.75rem;
+  text-decoration: none;
+}
+.sidebar .cv-download-btn:hover {
+  background: var(--gold);
+  color: var(--bg) !important;
+  text-decoration: none;
+}
+
 /* ---- Content Area ---- */
 .content-area {
   flex: 1;
@@ -216,10 +237,23 @@ a:hover { color: var(--gold-light); text-decoration: none; }
   padding-bottom: 0.4rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .section-title:first-child { margin-top: 0; }
-.section-title h3 { display: none; } /* hide old h3 if present */
+.section-title h3 { display: none; }
+
+.section-see-all {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--gold);
+  transition: color 0.2s;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.section-see-all:hover { color: var(--gold-light); }
 
 /* ---- Job Search Banner ---- */
 .job-banner {
@@ -238,9 +272,33 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 }
 
 .job-banner-icon {
-  font-size: 1rem;
   flex-shrink: 0;
-  margin-top: 0.05rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0.12rem;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  position: relative;
+}
+
+.status-dot::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.35);
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
 }
 
 .job-banner strong {
@@ -308,8 +366,9 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 
 .project-image {
   width: 110px;
-  height: 75px;
-  object-fit: cover;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  background: var(--bg);
   border-radius: 6px;
   flex-shrink: 0;
   border: 1px solid var(--border);
@@ -339,7 +398,7 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 }
 
 .project-authors {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 0.2rem;
 }
@@ -347,12 +406,6 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 .project-authors a { color: var(--text-muted); }
 .project-authors a:hover { color: var(--gold); }
 
-.project-tldr {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
 
 .project-links {
   display: flex;
@@ -380,7 +433,7 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 /* ---- News ---- */
 .news-list, .scrollable-news {
   max-height: 290px;
-  overflow-y: auto;
+  overflow-y: auto !important;
   padding-right: 4px;
   background: transparent !important;
   border: none !important;
@@ -420,6 +473,19 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 
 .news-content strong { color: var(--text); }
 .news-content span { color: inherit; }
+
+/* ---- Under Review Badge ---- */
+.badge-under-review {
+  display: inline-block;
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.1rem 0.65rem;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
 
 /* ---- Social (old layout fallback) ---- */
 .social { display: none; }
@@ -537,6 +603,26 @@ a:hover { color: var(--gold-light); text-decoration: none; }
 
 .resume-card:hover { box-shadow: none; }
 
+.cv-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.cv-dl-btn:hover {
+  background: var(--gold);
+  color: var(--bg) !important;
+  text-decoration: none;
+}
+
 /* ---- Bootstrap container overrides ---- */
 .container.mt-5 { margin-top: 1.5rem !important; }
 .post { padding: 0; }
@@ -578,6 +664,29 @@ footer.fixed-bottom {
 footer.fixed-bottom a { color: var(--gold); }
 footer.fixed-bottom a:hover { color: var(--gold-light); text-decoration: none; }
 
+/* ---- Site Footer ---- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-footer-inner {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.site-footer a { color: var(--gold); }
+.site-footer a:hover { color: var(--gold-light); }
+
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
   .site-layout {
@@ -599,6 +708,6 @@ footer.fixed-bottom a:hover { color: var(--gold-light); text-decoration: none; }
 
   .project-image {
     width: 100%;
-    height: 160px;
+    aspect-ratio: 16/9;
   }
 }

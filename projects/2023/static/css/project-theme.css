@@ -1,0 +1,342 @@
+/* ============================================================
+   Project Page Theme — Dark Navy + Purdue Gold
+   Extends design language from main site (assets/css/main.css)
+   Applied over Bulma + index.css
+   ============================================================ */
+
+:root {
+  --bg:         #0f172a;
+  --bg-nav:     #080f1e;
+  --bg-card:    #1e293b;
+  --bg-hover:   #263348;
+  --text:       #f1f5f9;
+  --text-muted: #b8c9dc;
+  --gold:       #CEB888;
+  --gold-light: #ddd0a8;
+  --border:     #2d3f5a;
+  --radius:     10px;
+}
+
+/* ---- Base ---- */
+html { scroll-behavior: smooth; }
+
+html, body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
+               'Helvetica Neue', Arial, sans-serif;
+}
+
+a             { color: var(--gold);       transition: color 0.2s; text-decoration: none; }
+a:hover       { color: var(--gold-light); text-decoration: none; }
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ---- Text selection ---- */
+::selection      { background: rgba(206,184,136,0.35); color: #fff; }
+::-moz-selection { background: rgba(206,184,136,0.35); color: #fff; }
+
+/* =============================================================
+   NAVBAR
+   ============================================================= */
+.navbar {
+  background-color: var(--bg-nav) !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5) !important;
+  padding: 0.65rem 1rem !important;
+}
+
+.navbar-item,
+.navbar-link {
+  background-color: transparent !important;
+  color: var(--text-muted) !important;
+  transition: color 0.2s;
+}
+
+.navbar-item:hover,
+.navbar-link:hover {
+  background-color: var(--bg-card) !important;
+  color: var(--gold) !important;
+}
+
+.navbar-item .icon,
+.navbar-item .fas,
+.navbar-item .fab { color: var(--gold) !important; }
+
+.navbar-burger span { background-color: var(--text) !important; }
+
+/* =============================================================
+   HERO — paper title block
+   ============================================================= */
+.hero,
+.hero.is-light,
+section.hero { background-color: var(--bg) !important; }
+
+.hero-body {
+  padding-top: 3.5rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Paper title */
+.publication-title {
+  font-family: 'Castoro', Georgia, 'Times New Roman', serif !important;
+  color: var(--text) !important;
+  font-size: 2.1rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Author names */
+.publication-authors {
+  color: var(--text-muted) !important;
+}
+
+.publication-authors a {
+  color: var(--gold) !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.publication-authors a:hover { color: var(--gold-light) !important; }
+
+.author-block          { display: inline-block; color: var(--text-muted) !important; }
+.author-block a        { color: var(--gold) !important; }
+.author-block a:hover  { color: var(--gold-light) !important; }
+
+/* Affiliation / footnote lines */
+.is-size-5.publication-authors p { color: var(--text-muted) !important; }
+
+/* Venue badge  — use on a <span class="venue-badge"> inside the hero */
+.venue-badge {
+  display: inline-block;
+  background: rgba(206,184,136,0.1);
+  border: 1px solid rgba(206,184,136,0.35);
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.2rem 0.85rem;
+  border-radius: 20px;
+  margin-top: 0.4rem;
+}
+
+/* =============================================================
+   LINK BUTTONS  (arXiv, Code, Project, etc.)
+   ============================================================= */
+.link-block .button,
+.publication-links .button,
+.publication-links .button.is-dark {
+  background: transparent !important;
+  color: var(--gold) !important;
+  border: 1px solid var(--gold) !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  font-size: 0.84rem !important;
+  padding: 0.45rem 1rem !important;
+  box-shadow: none !important;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s !important;
+  text-decoration: none !important;
+}
+
+.link-block .button:hover,
+.publication-links .button:hover {
+  background: var(--gold) !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 14px rgba(206,184,136,0.22) !important;
+}
+
+.link-block .button .icon,
+.publication-links .button .icon { color: inherit !important; }
+
+/* =============================================================
+   SECTIONS
+   ============================================================= */
+section.section,
+.section { background-color: var(--bg) !important; }
+
+/* Section divider line between hero & content */
+.section + .section { border-top: 1px solid var(--border); }
+
+/* Section headings */
+h2.title.is-3,
+.title.is-3 {
+  color: var(--gold) !important;
+  font-family: 'Castoro', Georgia, serif !important;
+  font-size: 1.45rem !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1.5rem !important;
+}
+
+h2.title.is-2,
+.title.is-2 {
+  color: var(--text) !important;
+  font-family: 'Castoro', Georgia, serif !important;
+}
+
+/* =============================================================
+   ABSTRACT CARD
+   ============================================================= */
+.cardabstract {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-left: 4px solid var(--gold) !important;
+  border-radius: 0 var(--radius) var(--radius) 0 !important;
+  box-shadow: none !important;
+  color: var(--text-muted) !important;
+  font-size: 0.97rem !important;
+  line-height: 1.8 !important;
+  padding: 1.5rem 1.75rem !important;
+  transition: box-shadow 0.2s;
+}
+
+.cardabstract:hover {
+  box-shadow: 0 4px 20px rgba(206,184,136,0.08) !important;
+}
+
+/* =============================================================
+   IMAGE + CAPTION BLOCK
+   ============================================================= */
+.image-caption-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.image-caption-container img {
+  border-radius: 6px;
+  width: 100%;
+  border: 1px solid var(--border);
+}
+
+.im_caption {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--text-muted) !important;
+  font-size: 0.88rem !important;
+  line-height: 1.7 !important;
+  padding: 1rem 0 0 0 !important;
+  border-radius: 0 !important;
+}
+
+/* =============================================================
+   BIBTEX SECTION
+   ============================================================= */
+#BibTeX { border-top: 1px solid var(--border) !important; }
+
+#BibTeX h2.title {
+  color: var(--gold) !important;
+  font-family: 'Castoro', Georgia, serif !important;
+  font-size: 1.45rem !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding-bottom: 0.45rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+#BibTeX pre {
+  background: var(--bg-nav) !important;
+  border: 1px solid var(--border) !important;
+  border-left: 4px solid var(--gold) !important;
+  border-radius: 0 var(--radius) var(--radius) 0 !important;
+  color: var(--text-muted) !important;
+  font-size: 0.87rem !important;
+  line-height: 1.7 !important;
+  padding: 1.25rem 1.5rem !important;
+  overflow-x: auto;
+  box-shadow: none !important;
+}
+
+#BibTeX pre code {
+  background: transparent !important;
+  color: var(--text-muted) !important;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', Menlo, monospace !important;
+}
+
+/* =============================================================
+   GENERAL CONTENT TEXT
+   ============================================================= */
+.content p,
+.content li   { color: var(--text-muted) !important; }
+.content h2,
+.content h3   { color: var(--text) !important; }
+
+/* Bulma column default text */
+.column       { color: var(--text) !important; }
+
+/* =============================================================
+   CAROUSEL / RESULTS
+   ============================================================= */
+.results-carousel .item {
+  border-color: var(--border) !important;
+  background: var(--bg-card) !important;
+}
+
+/* =============================================================
+   FOOTER
+   ============================================================= */
+footer.footer {
+  background-color: var(--bg-nav) !important;
+  border-top: 1px solid var(--border) !important;
+  color: var(--text-muted) !important;
+  padding: 2.5rem 1.5rem !important;
+}
+
+footer.footer .content p {
+  color: var(--text-muted) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.65;
+}
+
+footer.footer a           { color: var(--gold) !important; }
+footer.footer a:hover     { color: var(--gold-light) !important; text-decoration: underline; }
+
+/* =============================================================
+   TEASER VIDEO SECTION
+   ============================================================= */
+.hero.teaser { background-color: var(--bg) !important; }
+
+.hero.teaser .hero-body {
+  padding-top: 0 !important;
+  padding-bottom: 2rem !important;
+}
+
+.hero.teaser video {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+/* =============================================================
+   IMAGE GALLERY (exposure / colorization result grids)
+   ============================================================= */
+.gallery-container { background: transparent; }
+
+/* Row labels */
+.image-label,
+.image-label-vert {
+  color: var(--text-muted) !important;
+}
+
+/* Zoom effect — reduce from 4.5× to 3× on dark bg for usability */
+.image-gallery img:hover {
+  transform: scale(3) !important;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6) !important;
+}
+
+/* Section divider line */
+.line-between { background-color: var(--border) !important; }
+
+/* =============================================================
+   RESPONSIVE
+   ============================================================= */
+@media (max-width: 768px) {
+  .publication-title { font-size: 1.55rem !important; }
+  .hero-body         { padding-top: 2rem !important; }
+}
