@@ -35,6 +35,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
 
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Styles -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
   <link rel="stylesheet" href="assets/css/main.css">
@@ -97,11 +102,14 @@
       <div class="sidebar-location">West Lafayette, USA</div>
       <div class="social-icons">
         <a href="mailto:purohitv@purdue.edu" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://scholar.google.com/citations?user=2e89rmUAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=2e89rmUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
         <a href="https://www.linkedin.com/in/vishalsp" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/Vishal-S-P" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       </div>
       <div class="contact-note">Email is the best way to reach me.</div>
+      <a class="cv-download-btn" href="assets/pdf/resume.pdf" target="_blank">
+        <i class="fas fa-file-pdf"></i> Download CV
+      </a>
     </aside>
 
     <!-- Main Content -->
@@ -112,7 +120,7 @@
 
     <!-- Job Search Banner -->
     <div class="job-banner">
-      <span class="job-banner-icon">&#x1F50D;</span>
+      <span class="job-banner-icon"><span class="status-dot"></span></span>
       <span>I am actively seeking full-time industry positions as a <strong>Research Scientist</strong> / <strong>Applied Scientist</strong> / <strong>Research Engineer</strong> starting Jan 2027 in USA.</span>
     </div>
 
@@ -127,8 +135,8 @@
       </p>
 
       <p>
-        Through internships at Apple , Samsung Research America (MPI Lab) and AMD, I have gained hands-on industry experience in large-scale training, personalization, fine-tuning, and alignment of
-        diffusion, vision-language, and multimodal models on GPU clusters, along with hardware-aware model deployment.</a>
+        Through internships at Apple, Samsung Research America (MPI Lab) and AMD, I have gained hands-on industry experience in large-scale training, personalization, fine-tuning, and alignment of
+        diffusion, vision-language, and multimodal models on GPU clusters, along with hardware-aware model deployment.
       </p>
 
       <p>
@@ -146,11 +154,13 @@
     <div class="section-title">Research Interests</div>
     <ul class="interests-list">
       <li>Multimodal foundation models and generative AI</li>
-      <li>World models</li>
+      <li>World models and video understanding</li>
+      <li>Inverse problems and image restoration</li>
+      <li>Controllable image and video generation</li>
     </ul>
 
       <!-- Recent Publications -->
-      <div class="section-title">Recent Publications</div>
+      <div class="section-title">Selected Publications <a class="section-see-all" href="publications/">See all →</a></div>
       <div id="project-list"></div>
       <script src="./projects/projects.js"></script>
 
@@ -159,7 +169,7 @@
       <div class="news-list">
         <div class="news-item">
           <div class="news-date">Feb 27, 2026</div>
-          <div class="news-content">Interning at <strong>Apple ,</strong> Cupertino, CA for summer 2026.</div>
+          <div class="news-content">Interning at <strong>Apple,</strong> Cupertino, CA for summer 2026.</div>
         </div>
 
         <div class="news-item">
@@ -227,6 +237,18 @@
     </main><!-- /.content-area -->
 
   </div><!-- /.site-layout -->
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span>&copy; 2026 Vishal Purohit</span>
+      <span>&middot;</span>
+      <a href="assets/pdf/resume.pdf" target="_blank">CV</a>
+      <span>&middot;</span>
+      <a href="https://scholar.google.com/citations?hl=en&user=2e89rmUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>
+      <span>&middot;</span>
+      <a href="https://github.com/Vishal-S-P" target="_blank">GitHub</a>
+    </div>
+  </footer>
 
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
